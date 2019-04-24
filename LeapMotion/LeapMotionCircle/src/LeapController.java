@@ -20,7 +20,6 @@ import java.util.Date;
 class LeapListener extends Listener
 {
 	Fenster fenster = new Fenster();
-	//Server server = new Server();
 	private double vol = 0;
 	
 	public void onInit(Controller controller)
