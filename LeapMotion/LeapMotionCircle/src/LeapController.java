@@ -168,13 +168,14 @@ class LeapListener extends Listener
 						CircleGesture previous = new CircleGesture(controller.frame(1).gesture(circle.id()));
 						sweptAngle = (circle.progress() - previous.progress()) * 2 * Math.PI;
 					}
-					
-					/*System.out.println("Circle ID: " + circle.id()
+					/*
+					System.out.println("Circle ID: " + circle.id()
 										+ " State: " + circle.state()
 										+ " Progress: " + circle.progress()  
 										//+ " Radius: " + circle.radius()
 										//+ " Angle: " + Math.toDegrees(sweptAngle)
-										+ " Direction: " + clockwiseness);*/
+										+ " Direction: " + clockwiseness);
+					*/
 					
 					vol = Math.round(vol * 100.0) / 100.0;
 					//System.out.println("Volume: " + vol);
