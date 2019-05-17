@@ -1,0 +1,441 @@
+[
+  {
+    "text": "Drone Altitude Demo",
+    "type": "folder",
+    "numChildren": 3,
+    "numChildrenLocal": 3,
+    "children": true,
+    "allowPartialDownload": false,
+    "state": {
+      "opened": false
+    },
+    "package": "Industrial Toolbox",
+    "packageUId": "com.ti.mmwave_industrial_toolbox__3.3.1",
+    "url": "/api/resources?path=Software/mmWave%20Sensors/Industrial%20Toolbox/Labs&package=com.ti.mmwave_industrial_toolbox__3.3.1::xdctools__3.50.08.24",
+    "license": "mmwave_industrial_toolbox_3_3_1/license/SRAS 3841-325565-v1-Radar_Demo_Clickwrap.pdf",
+    "downloadLink": "api/bundle?vid=com.ti.mmwave_industrial_toolbox__3.3.1&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.mmwave_industrial_toolbox__3.3.1",
+    "removeofflineLink": "api/resources?package=com.ti.mmwave_industrial_toolbox__3.3.1::xdctools__3.50.08.24&path=Software/mmWave Sensors/Industrial Toolbox/Labs/Drone Altitude Demo&removeoffline=true",
+    "overviewDescription": "Track the height and vertical speed of a drone relative to the ground using the TI mmWave sensor xWR14xx EVM.",
+    "packageOrder": 202
+  },
+  {
+    "text": "Intelligent Lighting and Factory Automation Demo",
+    "type": "folder",
+    "numChildren": 3,
+    "numChildrenLocal": 3,
+    "children": true,
+    "allowPartialDownload": false,
+    "state": {
+      "opened": false
+    },
+    "package": "Industrial Toolbox",
+    "packageUId": "com.ti.mmwave_industrial_toolbox__3.3.1",
+    "url": "/api/resources?path=Software/mmWave%20Sensors/Industrial%20Toolbox/Labs&package=com.ti.mmwave_industrial_toolbox__3.3.1::xdctools__3.50.08.24",
+    "license": "mmwave_industrial_toolbox_3_3_1/license/SRAS 3841-325565-v1-Radar_Demo_Clickwrap.pdf",
+    "downloadLink": "api/bundle?vid=com.ti.mmwave_industrial_toolbox__3.3.1&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.mmwave_industrial_toolbox__3.3.1",
+    "removeofflineLink": "api/resources?package=com.ti.mmwave_industrial_toolbox__3.3.1::xdctools__3.50.08.24&path=Software/mmWave Sensors/Industrial Toolbox/Labs/Intelligent Lighting and Factory Automation Demo&removeoffline=true",
+    "overviewDescription": "Track the position of a robot in a model factory/office setting using the TI mmWave sensor xWR14xx EVM.",
+    "packageOrder": 202
+  },
+  {
+    "text": "mmWave SDK Demo",
+    "type": "folder",
+    "numChildren": 10,
+    "numChildrenLocal": 10,
+    "children": true,
+    "allowPartialDownload": false,
+    "state": {
+      "opened": false
+    },
+    "package": "Industrial Toolbox",
+    "packageUId": "com.ti.mmwave_industrial_toolbox__3.3.1",
+    "url": "/api/resources?path=Software/mmWave%20Sensors/Industrial%20Toolbox/Labs&package=com.ti.mmwave_industrial_toolbox__3.3.1::xdctools__3.50.08.24",
+    "license": "mmwave_industrial_toolbox_3_3_1/license/SRAS 3841-325565-v1-Radar_Demo_Clickwrap.pdf",
+    "downloadLink": "api/bundle?vid=com.ti.mmwave_industrial_toolbox__3.3.1&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.mmwave_industrial_toolbox__3.3.1",
+    "removeofflineLink": "api/resources?package=com.ti.mmwave_industrial_toolbox__3.3.1::xdctools__3.50.08.24&path=Software/mmWave Sensors/Industrial Toolbox/Labs/mmWave SDK Demo&removeoffline=true",
+    "packageOrder": 202
+  },
+  {
+    "text": "Water vs Ground Classification Demo",
+    "type": "folder",
+    "numChildren": 4,
+    "numChildrenLocal": 17,
+    "children": true,
+    "allowPartialDownload": false,
+    "state": {
+      "opened": false
+    },
+    "package": "Industrial Toolbox",
+    "packageUId": "com.ti.mmwave_industrial_toolbox__3.3.1",
+    "url": "/api/resources?path=Software/mmWave%20Sensors/Industrial%20Toolbox/Labs&package=com.ti.mmwave_industrial_toolbox__3.3.1::xdctools__3.50.08.24",
+    "license": "mmwave_industrial_toolbox_3_3_1/license/SRAS 3841-325565-v1-Radar_Demo_Clickwrap.pdf",
+    "downloadLink": "api/bundle?vid=com.ti.mmwave_industrial_toolbox__3.3.1&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.mmwave_industrial_toolbox__3.3.1",
+    "removeofflineLink": "api/resources?package=com.ti.mmwave_industrial_toolbox__3.3.1::xdctools__3.50.08.24&path=Software/mmWave Sensors/Industrial Toolbox/Labs/Water vs Ground Classification Demo&removeoffline=true",
+    "overviewDescription": "This lab demonstrates the usage of TI mmWave sensors to differentiate between water and ground. The fundamental principle being demonstrated is the ability of TI’s mmWave sensors to detect extremely fine movement of the target using phase measurement. Ripples in water introduce measurable phase difference in the reflected signal which can be used to classify water from a solid surface (e.g. ground). The lab provides full source code and a CCS project and runs on the TI mmWave sensor xWR14xx EVM.",
+    "packageOrder": 202
+  },
+  {
+    "text": "Vital Signs Demo",
+    "type": "folder",
+    "numChildren": 6,
+    "numChildrenLocal": 21,
+    "children": true,
+    "allowPartialDownload": false,
+    "state": {
+      "opened": false
+    },
+    "package": "Industrial Toolbox",
+    "packageUId": "com.ti.mmwave_industrial_toolbox__3.3.1",
+    "url": "/api/resources?path=Software/mmWave%20Sensors/Industrial%20Toolbox/Labs&package=com.ti.mmwave_industrial_toolbox__3.3.1::xdctools__3.50.08.24",
+    "license": "mmwave_industrial_toolbox_3_3_1/license/SRAS 3841-325565-v1-Radar_Demo_Clickwrap.pdf",
+    "downloadLink": "api/bundle?vid=com.ti.mmwave_industrial_toolbox__3.3.1&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.mmwave_industrial_toolbox__3.3.1",
+    "removeofflineLink": "api/resources?package=com.ti.mmwave_industrial_toolbox__3.3.1::xdctools__3.50.08.24&path=Software/mmWave Sensors/Industrial Toolbox/Labs/Vital Signs Demo&removeoffline=true",
+    "overviewDescription": "This lab demonstrates the usage of TI mmWave sensors to detect miniscule motions, such as displacement of the chest when the heart beats or the person breathes.  The fundamental principle being demonstrated is the ability of TI’s mmWave sensors to detect extremely fine movement of the target using phase measurement.  The lab provides full source code and a CCS project and runs on the TI mmWave sensor xWR14xx EVM.",
+    "packageOrder": 202
+  },
+  {
+    "text": "4K FFT Stitching Algorithm",
+    "type": "folder",
+    "numChildren": 3,
+    "numChildrenLocal": 21,
+    "children": true,
+    "allowPartialDownload": false,
+    "state": {
+      "opened": false
+    },
+    "package": "Industrial Toolbox",
+    "packageUId": "com.ti.mmwave_industrial_toolbox__3.3.1",
+    "url": "/api/resources?path=Software/mmWave%20Sensors/Industrial%20Toolbox/Labs&package=com.ti.mmwave_industrial_toolbox__3.3.1::xdctools__3.50.08.24",
+    "license": "mmwave_industrial_toolbox_3_3_1/license/SRAS 3841-325565-v1-Radar_Demo_Clickwrap.pdf",
+    "downloadLink": "api/bundle?vid=com.ti.mmwave_industrial_toolbox__3.3.1&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.mmwave_industrial_toolbox__3.3.1",
+    "removeofflineLink": "api/resources?package=com.ti.mmwave_industrial_toolbox__3.3.1::xdctools__3.50.08.24&path=Software/mmWave Sensors/Industrial Toolbox/Labs/4K FFT Stitching Algorithm&removeoffline=true",
+    "packageOrder": 202
+  },
+  {
+    "text": "High Accuracy Range Measurement",
+    "type": "folder",
+    "numChildren": 7,
+    "numChildrenLocal": 56,
+    "children": true,
+    "allowPartialDownload": false,
+    "state": {
+      "opened": false
+    },
+    "package": "Industrial Toolbox",
+    "packageUId": "com.ti.mmwave_industrial_toolbox__3.3.1",
+    "url": "/api/resources?path=Software/mmWave%20Sensors/Industrial%20Toolbox/Labs&package=com.ti.mmwave_industrial_toolbox__3.3.1::xdctools__3.50.08.24",
+    "license": "mmwave_industrial_toolbox_3_3_1/license/SRAS 3841-325565-v1-Radar_Demo_Clickwrap.pdf",
+    "downloadLink": "api/bundle?vid=com.ti.mmwave_industrial_toolbox__3.3.1&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.mmwave_industrial_toolbox__3.3.1",
+    "removeofflineLink": "api/resources?package=com.ti.mmwave_industrial_toolbox__3.3.1::xdctools__3.50.08.24&path=Software/mmWave Sensors/Industrial Toolbox/Labs/High Accuracy Range Measurement&removeoffline=true",
+    "packageOrder": 202
+  },
+  {
+    "text": "ROS Point Cloud Visualizer",
+    "type": "folder",
+    "numChildren": 4,
+    "numChildrenLocal": 4,
+    "children": true,
+    "allowPartialDownload": false,
+    "state": {
+      "opened": false
+    },
+    "package": "Industrial Toolbox",
+    "packageUId": "com.ti.mmwave_industrial_toolbox__3.3.1",
+    "url": "/api/resources?path=Software/mmWave%20Sensors/Industrial%20Toolbox/Labs&package=com.ti.mmwave_industrial_toolbox__3.3.1::xdctools__3.50.08.24",
+    "license": "mmwave_industrial_toolbox_3_3_1/license/SRAS 3841-325565-v1-Radar_Demo_Clickwrap.pdf",
+    "downloadLink": "api/bundle?vid=com.ti.mmwave_industrial_toolbox__3.3.1&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.mmwave_industrial_toolbox__3.3.1",
+    "removeofflineLink": "api/resources?package=com.ti.mmwave_industrial_toolbox__3.3.1::xdctools__3.50.08.24&path=Software/mmWave Sensors/Industrial Toolbox/Labs/ROS Point Cloud Visualizer&removeoffline=true",
+    "overviewDescription": "This lab allows for mmWave radar point cloud visualization using the popular RVIZ tool in the Robot Operating System (ROS) environment familiar to many robotics engineers.  The point cloud is generated by the TI provided ROS driver package software for the IWR1443BOOST, IWR1642BOOST, and IWR6843ISK EVMs.  With this driver and software from the ROS community (ros.org) engineers may evaluate what the mmWave radar can detect and see in a scene quickly with useful tools and libraries.",
+    "packageOrder": 202
+  },
+  {
+    "text": "Fluid Level Transmitter with mmWave",
+    "type": "folder",
+    "numChildren": 2,
+    "numChildrenLocal": 2,
+    "children": true,
+    "allowPartialDownload": false,
+    "state": {
+      "opened": false
+    },
+    "package": "Industrial Toolbox",
+    "packageUId": "com.ti.mmwave_industrial_toolbox__3.3.1",
+    "url": "/api/resources?path=Software/mmWave%20Sensors/Industrial%20Toolbox/Labs&package=com.ti.mmwave_industrial_toolbox__3.3.1::xdctools__3.50.08.24",
+    "license": "mmwave_industrial_toolbox_3_3_1/license/SRAS 3841-325565-v1-Radar_Demo_Clickwrap.pdf",
+    "downloadLink": "api/bundle?vid=com.ti.mmwave_industrial_toolbox__3.3.1&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.mmwave_industrial_toolbox__3.3.1",
+    "removeofflineLink": "api/resources?package=com.ti.mmwave_industrial_toolbox__3.3.1::xdctools__3.50.08.24&path=Software/mmWave Sensors/Industrial Toolbox/Labs/Fluid Level Transmitter with mmWave&removeoffline=true",
+    "overviewDescription": "This lab showcases real-world implementation of the high-accuracy range algorithm to measure the volume of liquid in a tank.  Displacement of the liquid is measured over time with ~1mm accuracy which allows for very accurate volume detection.  The algorithm used can be scaled to sub-mm accuracy with appropriate mounting equipment.",
+    "packageOrder": 202
+  },
+  {
+    "text": "Autonomous Robotics with ROS for mmWave",
+    "type": "folder",
+    "numChildren": 4,
+    "numChildrenLocal": 4,
+    "children": true,
+    "allowPartialDownload": false,
+    "state": {
+      "opened": false
+    },
+    "package": "Industrial Toolbox",
+    "packageUId": "com.ti.mmwave_industrial_toolbox__3.3.1",
+    "url": "/api/resources?path=Software/mmWave%20Sensors/Industrial%20Toolbox/Labs&package=com.ti.mmwave_industrial_toolbox__3.3.1::xdctools__3.50.08.24",
+    "license": "mmwave_industrial_toolbox_3_3_1/license/SRAS 3841-325565-v1-Radar_Demo_Clickwrap.pdf",
+    "downloadLink": "api/bundle?vid=com.ti.mmwave_industrial_toolbox__3.3.1&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.mmwave_industrial_toolbox__3.3.1",
+    "removeofflineLink": "api/resources?package=com.ti.mmwave_industrial_toolbox__3.3.1::xdctools__3.50.08.24&path=Software/mmWave Sensors/Industrial Toolbox/Labs/Autonomous Robotics with ROS for mmWave&removeoffline=true",
+    "overviewDescription": "This lab allows for the TI mmWave sensor to be used with popular mapping and navigation libraries in the Robot Operating System (ROS) environment, familiar to many robotics engineers.  The lab uses the Octomap server and move_base libraries with the TI mmWave ROS Driver Package software interface to the TI mmWave sensor IWR1443BOOST EVM or IWR6843ISK EVM (running the mmWave SDK out-of-box demo).  With this driver and software from the ROS community (ros.org) engineers may evaluate robot navigation and object avoidance quickly and easily.",
+    "packageOrder": 202
+  },
+  {
+    "text": "Gesture Recognition - Twirl Example",
+    "type": "folder",
+    "numChildren": 3,
+    "numChildrenLocal": 10,
+    "children": true,
+    "allowPartialDownload": false,
+    "state": {
+      "opened": false
+    },
+    "package": "Industrial Toolbox",
+    "packageUId": "com.ti.mmwave_industrial_toolbox__3.3.1",
+    "url": "/api/resources?path=Software/mmWave%20Sensors/Industrial%20Toolbox/Labs&package=com.ti.mmwave_industrial_toolbox__3.3.1::xdctools__3.50.08.24",
+    "license": "mmwave_industrial_toolbox_3_3_1/license/SRAS 3841-325565-v1-Radar_Demo_Clickwrap.pdf",
+    "downloadLink": "api/bundle?vid=com.ti.mmwave_industrial_toolbox__3.3.1&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.mmwave_industrial_toolbox__3.3.1",
+    "removeofflineLink": "api/resources?package=com.ti.mmwave_industrial_toolbox__3.3.1::xdctools__3.50.08.24&path=Software/mmWave Sensors/Industrial Toolbox/Labs/Gesture Recognition - Twirl Example&removeoffline=true",
+    "overviewLink": "c:/ti/mmwave_industrial_toolbox_3_3_1/labs/lab0009-gesture-recog-twirl/docs/gesture_twirl_14xx_lab_user_guide.html",
+    "overviewDescription": "This lab demonstrates the use of TI mmWave sensors to detect and recognize hand gestures. The unique range, velocity, and angle data from mmWave sensors can enable the detection of natural gestures. This example shows how mmWave can be used to detect a finger twirling gesture and recognize the direction of motion. The lab provides full source code, a CCS project, a MATLAB GUI, and runs on the TI mmWave sensor xWR14xx EVM.",
+    "packageOrder": 202
+  },
+  {
+    "text": "Gesture Recognition - Swipe Example",
+    "type": "folder",
+    "numChildren": 3,
+    "numChildrenLocal": 11,
+    "children": true,
+    "allowPartialDownload": false,
+    "state": {
+      "opened": false
+    },
+    "package": "Industrial Toolbox",
+    "packageUId": "com.ti.mmwave_industrial_toolbox__3.3.1",
+    "url": "/api/resources?path=Software/mmWave%20Sensors/Industrial%20Toolbox/Labs&package=com.ti.mmwave_industrial_toolbox__3.3.1::xdctools__3.50.08.24",
+    "license": "mmwave_industrial_toolbox_3_3_1/license/SRAS 3841-325565-v1-Radar_Demo_Clickwrap.pdf",
+    "downloadLink": "api/bundle?vid=com.ti.mmwave_industrial_toolbox__3.3.1&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.mmwave_industrial_toolbox__3.3.1",
+    "removeofflineLink": "api/resources?package=com.ti.mmwave_industrial_toolbox__3.3.1::xdctools__3.50.08.24&path=Software/mmWave Sensors/Industrial Toolbox/Labs/Gesture Recognition - Swipe Example&removeoffline=true",
+    "overviewLink": "c:/ti/mmwave_industrial_toolbox_3_3_1/labs/lab0010-gesture-recog-swipe/docs/gesture_swipe_14xx_lab_user_guide.html",
+    "overviewDescription": "This lab demonstrates the use of TI mmWave sensors to detect and recognize hand gestures. The unique range, velocity, and angle data from mmWave sensors can enable the detection of natural gestures. This example shows how mmWave can be used to detect a left-right-left swipe gesture while ignoring other motions in front of the sensor. The lab provides full source code, a CCS project, a MATLAB GUI, and runs on the TI mmWave sensor xWR14xx EVM.",
+    "packageOrder": 202
+  },
+  {
+    "text": "People Counting Demo",
+    "type": "folder",
+    "numChildren": 14,
+    "numChildrenLocal": 117,
+    "children": true,
+    "allowPartialDownload": false,
+    "state": {
+      "opened": false
+    },
+    "package": "Industrial Toolbox",
+    "packageUId": "com.ti.mmwave_industrial_toolbox__3.3.1",
+    "url": "/api/resources?path=Software/mmWave%20Sensors/Industrial%20Toolbox/Labs&package=com.ti.mmwave_industrial_toolbox__3.3.1::xdctools__3.50.08.24",
+    "license": "mmwave_industrial_toolbox_3_3_1/license/SRAS 3841-325565-v1-Radar_Demo_Clickwrap.pdf",
+    "downloadLink": "api/bundle?vid=com.ti.mmwave_industrial_toolbox__3.3.1&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.mmwave_industrial_toolbox__3.3.1",
+    "removeofflineLink": "api/resources?package=com.ti.mmwave_industrial_toolbox__3.3.1::xdctools__3.50.08.24&path=Software/mmWave Sensors/Industrial Toolbox/Labs/People Counting Demo&removeoffline=true",
+    "packageOrder": 202
+  },
+  {
+    "text": "Short Range Radar",
+    "type": "folder",
+    "numChildren": 4,
+    "numChildrenLocal": 38,
+    "children": true,
+    "allowPartialDownload": false,
+    "state": {
+      "opened": false
+    },
+    "package": "Industrial Toolbox",
+    "packageUId": "com.ti.mmwave_industrial_toolbox__3.3.1",
+    "url": "/api/resources?path=Software/mmWave%20Sensors/Industrial%20Toolbox/Labs&package=com.ti.mmwave_industrial_toolbox__3.3.1::xdctools__3.50.08.24",
+    "license": "mmwave_industrial_toolbox_3_3_1/license/SRAS 3841-325565-v1-Radar_Demo_Clickwrap.pdf",
+    "downloadLink": "api/bundle?vid=com.ti.mmwave_industrial_toolbox__3.3.1&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.mmwave_industrial_toolbox__3.3.1",
+    "removeofflineLink": "api/resources?package=com.ti.mmwave_industrial_toolbox__3.3.1::xdctools__3.50.08.24&path=Software/mmWave Sensors/Industrial Toolbox/Labs/Short Range Radar&removeoffline=true",
+    "overviewLink": "c:/ti/mmwave_industrial_toolbox_3_3_1/labs/lab0012_srr_16xx/docs/srr_16xx_user_guide.html",
+    "overviewDescription": "This lab demonstrates the use of mmWave technology for object detection. The lab employs a multimodal scheme of both short range radar (SRR) and ultra short range radar (USSR). Using the SRR mode allows the user to estimate and track an object's position (in the azimuthal plane) and velocity for up to 80m. THe USSR mode delivers richer point cloud information for up to 20m, enabling object detection for avoidance and safety applications.",
+    "packageOrder": 202
+  },
+  {
+    "text": "Traffic Monitoring",
+    "type": "folder",
+    "numChildren": 5,
+    "numChildrenLocal": 78,
+    "children": true,
+    "allowPartialDownload": false,
+    "state": {
+      "opened": false
+    },
+    "package": "Industrial Toolbox",
+    "packageUId": "com.ti.mmwave_industrial_toolbox__3.3.1",
+    "url": "/api/resources?path=Software/mmWave%20Sensors/Industrial%20Toolbox/Labs&package=com.ti.mmwave_industrial_toolbox__3.3.1::xdctools__3.50.08.24",
+    "license": "mmwave_industrial_toolbox_3_3_1/license/SRAS 3841-325565-v1-Radar_Demo_Clickwrap.pdf",
+    "downloadLink": "api/bundle?vid=com.ti.mmwave_industrial_toolbox__3.3.1&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.mmwave_industrial_toolbox__3.3.1",
+    "removeofflineLink": "api/resources?package=com.ti.mmwave_industrial_toolbox__3.3.1::xdctools__3.50.08.24&path=Software/mmWave Sensors/Industrial Toolbox/Labs/Traffic Monitoring&removeoffline=true",
+    "overviewLink": "c:/ti/mmwave_industrial_toolbox_3_3_1/labs/lab0013_traffic_monitoring_16xx/docs/traffic_monitoring_16xx_user_guide.html",
+    "overviewDescription": "This software package demonstrates the use of TI mmWave sensors to count and track multiple vehicles in a traffic monitoring application. Using the IWR1642, detection and tracking algorithms run onboard the device to localize vehicles and track their movement with a high degree of accuracy. This package includes a max velocity extension algorithm that enables accurate tracking of at least 3x the max velocity as determined by the radar chirp configuration.",
+    "packageOrder": 202
+  },
+  {
+    "text": "Zone Occupancy Detection - 14xx",
+    "type": "folder",
+    "numChildren": 3,
+    "numChildrenLocal": 3,
+    "children": true,
+    "allowPartialDownload": false,
+    "state": {
+      "opened": false
+    },
+    "package": "Industrial Toolbox",
+    "packageUId": "com.ti.mmwave_industrial_toolbox__3.3.1",
+    "url": "/api/resources?path=Software/mmWave%20Sensors/Industrial%20Toolbox/Labs&package=com.ti.mmwave_industrial_toolbox__3.3.1::xdctools__3.50.08.24",
+    "license": "mmwave_industrial_toolbox_3_3_1/license/SRAS-3841-325565-v1-Radar_Demo_Clickwrap.pdf",
+    "downloadLink": "api/bundle?vid=com.ti.mmwave_industrial_toolbox__3.3.1&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.mmwave_industrial_toolbox__3.3.1",
+    "removeofflineLink": "api/resources?package=com.ti.mmwave_industrial_toolbox__3.3.1::xdctools__3.50.08.24&path=Software/mmWave Sensors/Industrial Toolbox/Labs/Zone Occupancy Detection - 14xx&removeoffline=true",
+    "overviewLink": "c:/ti/mmwave_industrial_toolbox_3_3_1/labs/lab0016_zone_occ_14xx/docs/zone_occ_14xx_user_guide.html",
+    "packageOrder": 202
+  },
+  {
+    "text": "50m Outdoor People Tracking and False Detection Filtering - 68xx",
+    "type": "folder",
+    "numChildren": 5,
+    "numChildrenLocal": 73,
+    "children": true,
+    "allowPartialDownload": false,
+    "state": {
+      "opened": false
+    },
+    "package": "Industrial Toolbox",
+    "packageUId": "com.ti.mmwave_industrial_toolbox__3.3.1",
+    "url": "/api/resources?path=Software/mmWave%20Sensors/Industrial%20Toolbox/Labs&package=com.ti.mmwave_industrial_toolbox__3.3.1::xdctools__3.50.08.24",
+    "license": "mmwave_industrial_toolbox_3_3_1/license/SRAS 3841-325565-v1-Radar_Demo_Clickwrap.pdf",
+    "downloadLink": "api/bundle?vid=com.ti.mmwave_industrial_toolbox__3.3.1&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.mmwave_industrial_toolbox__3.3.1",
+    "removeofflineLink": "api/resources?package=com.ti.mmwave_industrial_toolbox__3.3.1::xdctools__3.50.08.24&path=Software/mmWave Sensors/Industrial Toolbox/Labs/50m Outdoor People Tracking and False Detection Filtering - 68xx&removeoffline=true",
+    "overviewLink": "c:/ti/mmwave_industrial_toolbox_3_3_1/labs/lab0019_pplcount_long_range_68xx/docs/pplcount_user_guide.html",
+    "packageOrder": 202
+  },
+  {
+    "text": "Area Scanner",
+    "type": "folder",
+    "numChildren": 3,
+    "numChildrenLocal": 3,
+    "children": true,
+    "allowPartialDownload": false,
+    "state": {
+      "opened": false
+    },
+    "package": "Industrial Toolbox",
+    "packageUId": "com.ti.mmwave_industrial_toolbox__3.3.1",
+    "url": "/api/resources?path=Software/mmWave%20Sensors/Industrial%20Toolbox/Labs&package=com.ti.mmwave_industrial_toolbox__3.3.1::xdctools__3.50.08.24",
+    "license": "mmwave_industrial_toolbox_3_3_1/license/SRAS 3841-325565-v1-Radar_Demo_Clickwrap.pdf",
+    "downloadLink": "api/bundle?vid=com.ti.mmwave_industrial_toolbox__3.3.1&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.mmwave_industrial_toolbox__3.3.1",
+    "removeofflineLink": "api/resources?package=com.ti.mmwave_industrial_toolbox__3.3.1::xdctools__3.50.08.24&path=Software/mmWave Sensors/Industrial Toolbox/Labs/Area Scanner&removeoffline=true",
+    "packageOrder": 202
+  },
+  {
+    "text": "Indoor False Detection Mitigation - 68xx",
+    "type": "folder",
+    "numChildren": 4,
+    "numChildrenLocal": 74,
+    "children": true,
+    "allowPartialDownload": false,
+    "state": {
+      "opened": false
+    },
+    "package": "Industrial Toolbox",
+    "packageUId": "com.ti.mmwave_industrial_toolbox__3.3.1",
+    "url": "/api/resources?path=Software/mmWave%20Sensors/Industrial%20Toolbox/Labs&package=com.ti.mmwave_industrial_toolbox__3.3.1::xdctools__3.50.08.24",
+    "license": "mmwave_industrial_toolbox_3_3_1/license/SRAS 3841-325565-v1-Radar_Demo_Clickwrap.pdf",
+    "downloadLink": "api/bundle?vid=com.ti.mmwave_industrial_toolbox__3.3.1&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.mmwave_industrial_toolbox__3.3.1",
+    "removeofflineLink": "api/resources?package=com.ti.mmwave_industrial_toolbox__3.3.1::xdctools__3.50.08.24&path=Software/mmWave Sensors/Industrial Toolbox/Labs/Indoor False Detection Mitigation - 68xx&removeoffline=true",
+    "overviewLink": "c:/ti/mmwave_industrial_toolbox_3_3_1/labs/lab0022_indoor_false_det_68xx/docs/indoor_false_det_68xx_user_guide.html",
+    "packageOrder": 202
+  },
+  {
+    "text": "Multiple Gesture and Motion Detection - 68xx",
+    "type": "folder",
+    "numChildren": 4,
+    "numChildrenLocal": 39,
+    "children": true,
+    "allowPartialDownload": false,
+    "state": {
+      "opened": false
+    },
+    "package": "Industrial Toolbox",
+    "packageUId": "com.ti.mmwave_industrial_toolbox__3.3.1",
+    "url": "/api/resources?path=Software/mmWave%20Sensors/Industrial%20Toolbox/Labs&package=com.ti.mmwave_industrial_toolbox__3.3.1::xdctools__3.50.08.24",
+    "license": "mmwave_industrial_toolbox_3_3_1/license/SRAS 3841-325565-v1-Radar_Demo_Clickwrap.pdf",
+    "downloadLink": "api/bundle?vid=com.ti.mmwave_industrial_toolbox__3.3.1&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.mmwave_industrial_toolbox__3.3.1",
+    "removeofflineLink": "api/resources?package=com.ti.mmwave_industrial_toolbox__3.3.1::xdctools__3.50.08.24&path=Software/mmWave Sensors/Industrial Toolbox/Labs/Multiple Gesture and Motion Detection - 68xx&removeoffline=true",
+    "overviewLink": "c:/ti/mmwave_industrial_toolbox_3_3_1/labs/lab0023_multi_gesture_and_motion_det_68xx/docs/multi_gesture_and_motion_det_68xx_user_guide.html",
+    "packageOrder": 202
+  },
+  {
+    "text": "Automated Doors - 68xx",
+    "type": "folder",
+    "numChildren": 2,
+    "numChildrenLocal": 2,
+    "children": true,
+    "allowPartialDownload": false,
+    "state": {
+      "opened": false
+    },
+    "package": "Industrial Toolbox",
+    "packageUId": "com.ti.mmwave_industrial_toolbox__3.3.1",
+    "url": "/api/resources?path=Software/mmWave%20Sensors/Industrial%20Toolbox/Labs&package=com.ti.mmwave_industrial_toolbox__3.3.1::xdctools__3.50.08.24",
+    "license": "mmwave_industrial_toolbox_3_3_1/license/SRAS 3841-325565-v1-Radar_Demo_Clickwrap.pdf",
+    "downloadLink": "api/bundle?vid=com.ti.mmwave_industrial_toolbox__3.3.1&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.mmwave_industrial_toolbox__3.3.1",
+    "removeofflineLink": "api/resources?package=com.ti.mmwave_industrial_toolbox__3.3.1::xdctools__3.50.08.24&path=Software/mmWave Sensors/Industrial Toolbox/Labs/Automated Doors - 68xx&removeoffline=true",
+    "overviewLink": "c:/ti/mmwave_industrial_toolbox_3_3_1/labs/lab0024_automated_doors_68xx/docs/automated_doors_user_guide.html",
+    "packageOrder": 202
+  },
+  {
+    "text": "ODS Point Cloud Demo - 68xx",
+    "type": "folder",
+    "numChildren": 4,
+    "numChildrenLocal": 4,
+    "children": true,
+    "allowPartialDownload": false,
+    "state": {
+      "opened": false
+    },
+    "package": "Industrial Toolbox",
+    "packageUId": "com.ti.mmwave_industrial_toolbox__3.3.1",
+    "url": "/api/resources?path=Software/mmWave%20Sensors/Industrial%20Toolbox/Labs&package=com.ti.mmwave_industrial_toolbox__3.3.1::xdctools__3.50.08.24",
+    "license": "mmwave_industrial_toolbox_3_3_1/license/SRAS 3841-325565-v1-Radar_Demo_Clickwrap.pdf",
+    "downloadLink": "api/bundle?vid=com.ti.mmwave_industrial_toolbox__3.3.1&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.mmwave_industrial_toolbox__3.3.1",
+    "removeofflineLink": "api/resources?package=com.ti.mmwave_industrial_toolbox__3.3.1::xdctools__3.50.08.24&path=Software/mmWave Sensors/Industrial Toolbox/Labs/ODS Point Cloud Demo - 68xx&removeoffline=true",
+    "overviewLink": "c:/ti/mmwave_industrial_toolbox_3_3_1/labs/lab0025_ods_point_cloud_demo_68xx/docs/ods_point_cloud_demo_68xx_user_guide.html",
+    "packageOrder": 202
+  }
+]

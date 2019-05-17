@@ -275,7 +275,7 @@ public class LeapController {
 		int lmOutputInt = 0;
 		controller.addListener(listener);
 		
-		String hostname = "192.168.137.28";
+		String hostname = "10.191.0.30";
         int port = Integer.parseInt("2016");
         
 		//System.out.println("Press Enter to quit");		
@@ -283,6 +283,7 @@ public class LeapController {
 		{
 			OutputStream output = socket.getOutputStream();
             PrintWriter writer = new PrintWriter(output, true);
+            writer.println("Leap Motion Controller connected");
 			
             while(true)
 			{
