@@ -69,20 +69,20 @@ Appending zeros 256
 File conversion complete!
 C:/ti/mmwave_sdk_03_01_01_02/packages/scripts/ImageCreator/multicore_image_generator/MulticoreImageGen.exe LE 37 0x02000006 multi_gesture_demo_68xx.bin 0x35510000 multi_gesture_68xx_mss.tmp 0xb5510000 C:/ti/mmwave_sdk_03_01_01_02/firmware/radarss/iwr6xxx_radarss_rprc.bin 0xd5510000 C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI/multi_gesture_68xx_dss/Debug/multi_gesture_68xx_dss.bin
 Number of Input Files 3
-Number of zeros 8
+Number of zeros 40
 Number of zeros 48
 Number of zeros 40
 
 C:/ti/mmwave_sdk_03_01_01_02/packages/scripts/ImageCreator/crc_multicore_image/crc_multicore_image.exe multi_gesture_demo_68xx.bin multi_gesture_demo_68xx.tmp
-size of App Image is 495360 bytes
+size of App Image is 495424 bytes
 cur_crc_read_addr 128
-cur_crc_read_addr 102336
-cur_crc_read_addr 320000
+cur_crc_read_addr 102400
+cur_crc_read_addr 320064
 Failed to remove CRC temp file
 
 C:/ti/mmwave_sdk_03_01_01_02/packages/scripts/ImageCreator/append_bin_crc/gen_bincrc32.exe multi_gesture_demo_68xx.bin
->>>> Binary CRC32 = e582d24a <<<<
->>>> Total bytes in binary file 495364 <<<<
+>>>> Binary CRC32 = 198ef281 <<<<
+>>>> Total bytes in binary file 495428 <<<<
 
  
 

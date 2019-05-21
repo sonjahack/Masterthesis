@@ -307,7 +307,6 @@
 #include <stdio.h>
 #include <math.h>
 
-
 /* BIOS/XDC Include Files. */
 #include <xdc/std.h>
 #include <xdc/cfg/global.h>
@@ -347,7 +346,6 @@
 #include <mmw_output.h>
 #include <mmw_messages.h>
 #include <mmw_gesture_out.h>
-
 
 /**************************************************************************
  *************************** Local Definitions ****************************
@@ -877,21 +875,26 @@ static void MmwDemo_mboxReadTask(UArg arg0, UArg arg1)
                             sizeof(GestureDemo_gesture_report));
 
 #else
+                    // modified 2019-05-20
+                    // put gesture output vice versa U->R R->U
+                    // the gestures are: (from right to left; from bottom to top)
                     char out =' ';
                     if (gestureCntPrev[UP_TO_DOWN_SWIPE_GESTURE] != gestureCnt[UP_TO_DOWN_SWIPE_GESTURE])
-                    {
-                        out = 'U';
-                        UART_writePolling(gMmwMssMCB.loggingUartHandle,
-                                (uint8_t*) (&out),
-                                sizeof(char) );
-
-                    }
-                    else if (gestureCntPrev[RIGHT_TO_LEFT_SWIPE_GESTURE] != gestureCnt[RIGHT_TO_LEFT_SWIPE_GESTURE])
                     {
                         out = 'R';
                         UART_writePolling(gMmwMssMCB.loggingUartHandle,
                                 (uint8_t*) (&out),
                                 sizeof(char) );
+                        System_printf("Gesture: %d\n",out);
+
+                    }
+                    else if (gestureCntPrev[RIGHT_TO_LEFT_SWIPE_GESTURE] != gestureCnt[RIGHT_TO_LEFT_SWIPE_GESTURE])
+                    {
+                        out = 'U';
+                        UART_writePolling(gMmwMssMCB.loggingUartHandle,
+                                (uint8_t*) (&out),
+                                sizeof(char) );
+                        System_printf("Gesture: %d\n",out);
                     }
 
                     /* Return the people detector state only if the detector state changes. */
