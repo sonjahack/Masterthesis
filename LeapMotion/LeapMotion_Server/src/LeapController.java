@@ -1,6 +1,9 @@
 import java.io.IOException;
 import java.io.OutputStream;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.PrintWriter;
+import java.io.BufferedReader;
 
 import com.leapmotion.leap.*;
 import com.leapmotion.leap.Gesture.State;
@@ -289,7 +292,12 @@ public class LeapController {
 	                PrintWriter writer = new PrintWriter(output, true);
 	                double zahl = (listener.provideStatus());
 	                writer.println(zahl);
-	                //writer.println(new Date().toString()); 
+	                //writer.println(new Date().toString());
+	                
+	                InputStream input = socket.getInputStream();
+	                BufferedReader reader = new BufferedReader(new InputStreamReader(input));
+	                String line = reader.readLine();
+	                System.out.println("Empfangen: "+ line);
                 }  
 			}	
 		}

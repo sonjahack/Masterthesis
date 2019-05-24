@@ -59,7 +59,7 @@ public class UART_communication {
 		    SerialPort port = null;
 		    try
 		    {
-		    	port = (SerialPort)portID.open("name",1000);
+		    	port = (SerialPort)portID.open("UART_communication",1000);
 		    	System.out.println("Selected Port opened");
 //		    	
 		    	port.setSerialPortParams(
