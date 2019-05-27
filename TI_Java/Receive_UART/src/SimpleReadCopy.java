@@ -28,15 +28,7 @@ public class SimpleReadCopy implements Runnable, SerialPortEventListener
                  if (portId.getName().equals("COM8")) 
                  {
                     SimpleReadCopy reader = new SimpleReadCopy();
-                    Network_connect network_c = new Network_connect(reader);
-            		
-//                    String hostname = "192.168.137.30";
-//            	    int port = Integer.parseInt("2016");
-//            	    
-//            	    Socket socket = new Socket(hostname, port);
-//            	    OutputStream output = socket.getOutputStream();
-//            	    PrintWriter writer = new PrintWriter(output, true);
-//            	    writer.println("Radar Sensor connected");            	    	
+                    Network_connect network_c = new Network_connect(reader);            	    	
                  }
             }
         }
@@ -98,8 +90,8 @@ public class SimpleReadCopy implements Runnable, SerialPortEventListener
 
     public void serialEvent(SerialPortEvent event) 
     {
-    	String sensor_Data ="";
-    	String sensorData="";
+    	String sensor_Data = "";
+    	String sensorData = "";
         switch(event.getEventType()) 
         {
 	        case SerialPortEvent.BI:
@@ -123,11 +115,10 @@ public class SimpleReadCopy implements Runnable, SerialPortEventListener
 	                }
 	                System.out.println(new String(readBuffer));
 	                sensor_Data = new String(readBuffer);
-	                sensor_output = "";
-	                sensor_output += sensor_Data.charAt(0);
-	                //provide_sensor_output(new String(readBuffer));
-	                //Network_connect network_connect = new Network_connect();
-	                //network_connect.send_data_to_server(new String(readBuffer));
+	                //sensor_output = "";
+	                //sensor_output += sensor_Data.charAt(0);
+	                set_SensorData(new String(readBuffer));
+	                //sensor_output = null;
 	            } 
 	            catch (IOException e) 
 	            {
@@ -137,52 +128,33 @@ public class SimpleReadCopy implements Runnable, SerialPortEventListener
         }
     }
     
+    public void set_SensorData(String data)
+    {
+    	sensor_output = data;
+    }
+    
     public String provide_SensorData()
     {
     	return sensor_output;
     }
     
-    
-//    public int provide_sensor_output(String output)
-//    {
-//    	System.out.println("Function called " + output);
-//    	if(output == "R")
-//    	{
-//    		//System.out.println("Function called; 1");
-//    		return 1;
-//    	}
-//    	else if(output == "U")
-//    	{
-//    		//System.out.println("Function called; 2");
-//    		return 2;
-//    	}
-//    	else
-//    	{
-//    		//System.out.println("Function called; 0");
-//    		return 0;
-//    	}
-//    }
+    public void resetSensorData()
+    {
+    	sensor_output = null;
+    }
 }
 
 class Network_connect extends Thread
 {
-	String sensor_output;
+	String sensor_output = "";
 	SimpleReadCopy si;
 	Socket socket;
 	OutputStream output;
 	PrintWriter writer;
 	
 	public Network_connect(SimpleReadCopy simple) throws UnknownHostException, IOException 
-	{
-//		String hostname = "127.0.0.1";
-//	    int port = Integer.parseInt("8080");
-//	    
-//	    socket = new Socket(hostname, port);
-//	    output = socket.getOutputStream();
-//	    writer = new PrintWriter(output, true);
-//	    writer.println("Radar Sensor connected");
-	    
-		sensor_output = simple.provide_SensorData();
+	{	    
+		//sensor_output = simple.provide_SensorData();
 		si = simple;
 		Thread thread = new Thread(this);
 		thread.start();
@@ -190,8 +162,11 @@ class Network_connect extends Thread
 	
 	public void run()
 	{
-		String hostname = "127.0.0.1";
-	    int port = Integer.parseInt("8080");
+		String hostname = "10.191.3.6";
+	    int port = Integer.parseInt("2016");
+	    String r = "R";
+	    String u = "U";
+	    String sensor_output_cut = null;
 	    
 	    try {
 			socket = new Socket(hostname, port);
@@ -212,48 +187,52 @@ class Network_connect extends Thread
 	    
 		while(true)
 		{
-		sensor_output = si.provide_SensorData();
-		writer.println(sensor_output);
-		
-		try
-		{
-			sleep(50);
+			sensor_output = si.provide_SensorData();
+			//System.out.println("Sensor Output: " + sensor_output + ".");
+			//System.out.println("Sensor Output Cut " + sensor_output_cut +".");
+			
+			if(sensor_output != null)
+			{
+				sensor_output_cut = "";
+				sensor_output_cut += sensor_output.charAt(0);
+				//System.out.println("check " + sensor_output_cut);
+				sensor_output = null;
+			}
+			else
+			{
+				sensor_output_cut = "";
+			}
+			//System.out.println("check " + sensor_output_cut + ".");
+			if(sensor_output_cut.contentEquals(r))
+			{
+				//System.out.println("check");
+				writer.println("enable; set:target 10;");
+				//writer.println(sensor_output_cut);
+				sensor_output_cut = null;
+				si.resetSensorData();
+			}
+			else if(sensor_output_cut.contentEquals(u))
+			{
+				writer.println("enable; set:target -10;");
+				//writer.println(sensor_output_cut);
+				sensor_output_cut = null;
+				si.resetSensorData();
+			}
+			else
+			{
+				System.out.println("No Gesture");
+				sensor_output_cut = null;
+			}
+			try
+			{
+				sleep(200);
+			}
+			catch(InterruptedException e)
+			{
+				System.out.println(e);
+			}
 		}
-		catch(InterruptedException e)
-		{
-			System.out.println(e);
-		}
-		}
-	}
-	
-//	public void send_data_to_server(String message) throws UnknownHostException, IOException 
-//	{
-//		String r = "R";
-//		String u = "U";
-//		String cut_msg = ""; 
-//		for (int i = 0; i < 1; i++) {
-//	       // if (message.charAt(i) != ' ')
-//	            cut_msg += message.charAt(i);
-//	    }
-//		String result = cut_msg.replace("\t", "");
-//		String hostname = "192.168.137.30";
-//	    int port = Integer.parseInt("2016");
-//		Socket socket = new Socket(hostname, port);
-//	    OutputStream output = socket.getOutputStream();
-//	    PrintWriter writer = new PrintWriter(output, true);
-//	    System.out.println("Check: "+ message);
-//	    if(result.contentEquals(r))
-//	    {
-//	    	//writer.println(result);
-//	    	writer.println("enable; set:target 10;");
-//	    }
-//	    if(result.contentEquals(u))
-//	    {
-//	    	writer.println("enable; set:target -10;");
-//	    }
-//	    socket.close();
-//	}
-	
+	}	
 }
 
 

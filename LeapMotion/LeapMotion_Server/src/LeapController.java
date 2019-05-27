@@ -298,7 +298,7 @@ public class LeapController {
 	                BufferedReader reader = new BufferedReader(new InputStreamReader(input));
 	                String line = reader.readLine();
 	                System.out.println("Empfangen: "+ line);
-                }  
+                }
 			}	
 		}
 		catch(IOException e)
