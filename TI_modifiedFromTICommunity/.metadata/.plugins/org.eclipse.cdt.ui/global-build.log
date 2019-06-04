@@ -1,0 +1,1069 @@
+
+**** Build of configuration Debug for project multi_gesture_68xx_dss ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+rm -f C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_dss/Debug/multi_gesture_68xx_dss.bin
+makefile:195: recipe for target 'pre-build' failed
+process_begin: CreateProcess(NULL, rm -f C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_dss/Debug/multi_gesture_68xx_dss.bin, ...) failed.
+make (e=2): Das System kann die angegebene Datei nicht finden.
+
+gmake[1]: [pre-build] Error 2 (ignored)
+ 
+'Building file: "../dss/dss_mmw.cfg"'
+'Invoking: XDCtools'
+"C:/ti/xdctools_3_50_08_24_core/xs" --xdcpath="C:/ti/bios_6_73_01_01/packages;C:/ti/ccsv7/ccs_base;" xdc.tools.configuro -o configPkg -t ti.targets.elf.C674 -p ti.platforms.c6x:IWR68XX:false:600 -r release -c "C:/ti/ti-cgt-c6000_8.1.3" --compileOptions "--enum_type=int " "../dss/dss_mmw.cfg"
+making package.mak (because of package.bld) ...
+generating interfaces for package configPkg (because package/package.xdc.inc is older than package.xdc) ...
+configuring dss_mmw.xe674 from package/cfg/dss_mmw_pe674.cfg ...
+generating custom ti.sysbios library makefile ... 
+Starting build of library sources ...
+making C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_dss/dss/src/sysbios/sysbios.ae674 ...
+gmake[1]: Entering directory `C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_dss/dss/src/sysbios'
+cle674 C:/ti/bios_6_73_01_01/packages/ti/sysbios/BIOS.c ...
+asme674 C:/ti/bios_6_73_01_01/packages/ti/sysbios/family/c64p/Exception_asm.s64P ...
+asme674 C:/ti/bios_6_73_01_01/packages/ti/sysbios/family/c64p/Hwi_asm.s62 ...
+asme674 C:/ti/bios_6_73_01_01/packages/ti/sysbios/family/c64p/Hwi_asm_switch.s62 ...
+asme674 C:/ti/bios_6_73_01_01/packages/ti/sysbios/family/c64p/Hwi_disp_always.s64P ...
+asme674 C:/ti/bios_6_73_01_01/packages/ti/sysbios/rts/ti/tls_get_tp.asm ...
+asme674 C:/ti/bios_6_73_01_01/packages/ti/sysbios/family/c62/TaskSupport_asm.s62 ...
+are674 BIOS.obj c64p_Exception_asm.obj c64p_Hwi_asm.obj c64p_Hwi_asm_switch.obj c64p_Hwi_disp_always.obj ti_tls_get_tp.obj c62_TaskSupport_asm.obj ...
+gmake[1]: Leaving directory `C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_dss/dss/src/sysbios'
+Build of libraries done.
+cle674 package/cfg/dss_mmw_pe674.c ...
+'Finished building: "../dss/dss_mmw.cfg"'
+ 
+'Building file: "../common/mmwDemo_monitor.c"'
+'Invoking: C6000 Compiler'
+"C:/ti/ti-cgt-c6000_8.1.3/bin/cl6x" -mv6740 --abi=eabi -O3 -ms0 --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_dss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_dss/dss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_dss/common" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_dss/common/ANN" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages/ti/demo/utils" --include_path="C:/ti/mathlib_c674x_3_1_2_1/packages" --include_path="C:/ti/dsplib_c64Px_3_4_0_0/packages/" --include_path="C:/ti/dsplib_c64Px_3_4_0_0/packages/ti/dsplib/src/DSP_fft16x16/c64P" --include_path="C:/ti/dsplib_c64Px_3_4_0_0/packages/ti/dsplib/src/DSP_fft32x32/c64P" --include_path="C:/ti/ti-cgt-c6000_8.1.3/include" -g --gcc --define=SOC_XWR68XX --define=SUBSYS_DSS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DOWNLOAD_FROM_CCS --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=MMW_6843_ODS --diag_error=10015 --display_error_number --diag_wrap=off --diag_warning=225 --gen_func_subsections=on --obj_extension=.oe674 --preproc_with_compile --preproc_dependency="common/mmwDemo_monitor.d_raw" --obj_directory="common" --cmd_file="configPkg/compiler.opt" "../common/mmwDemo_monitor.c"
+'Finished building: "../common/mmwDemo_monitor.c"'
+ 
+'Building file: "../dss/dss_config_edma_util.c"'
+'Invoking: C6000 Compiler'
+"C:/ti/ti-cgt-c6000_8.1.3/bin/cl6x" -mv6740 --abi=eabi -O3 -ms0 --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_dss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_dss/dss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_dss/common" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_dss/common/ANN" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages/ti/demo/utils" --include_path="C:/ti/mathlib_c674x_3_1_2_1/packages" --include_path="C:/ti/dsplib_c64Px_3_4_0_0/packages/" --include_path="C:/ti/dsplib_c64Px_3_4_0_0/packages/ti/dsplib/src/DSP_fft16x16/c64P" --include_path="C:/ti/dsplib_c64Px_3_4_0_0/packages/ti/dsplib/src/DSP_fft32x32/c64P" --include_path="C:/ti/ti-cgt-c6000_8.1.3/include" -g --gcc --define=SOC_XWR68XX --define=SUBSYS_DSS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DOWNLOAD_FROM_CCS --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=MMW_6843_ODS --diag_error=10015 --display_error_number --diag_wrap=off --diag_warning=225 --gen_func_subsections=on --obj_extension=.oe674 --preproc_with_compile --preproc_dependency="dss/dss_config_edma_util.d_raw" --obj_directory="dss" --cmd_file="configPkg/compiler.opt" "../dss/dss_config_edma_util.c"
+'Finished building: "../dss/dss_config_edma_util.c"'
+ 
+'Building file: "../dss/dss_lvds_stream.c"'
+'Invoking: C6000 Compiler'
+"C:/ti/ti-cgt-c6000_8.1.3/bin/cl6x" -mv6740 --abi=eabi -O3 -ms0 --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_dss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_dss/dss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_dss/common" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_dss/common/ANN" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages/ti/demo/utils" --include_path="C:/ti/mathlib_c674x_3_1_2_1/packages" --include_path="C:/ti/dsplib_c64Px_3_4_0_0/packages/" --include_path="C:/ti/dsplib_c64Px_3_4_0_0/packages/ti/dsplib/src/DSP_fft16x16/c64P" --include_path="C:/ti/dsplib_c64Px_3_4_0_0/packages/ti/dsplib/src/DSP_fft32x32/c64P" --include_path="C:/ti/ti-cgt-c6000_8.1.3/include" -g --gcc --define=SOC_XWR68XX --define=SUBSYS_DSS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DOWNLOAD_FROM_CCS --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=MMW_6843_ODS --diag_error=10015 --display_error_number --diag_wrap=off --diag_warning=225 --gen_func_subsections=on --obj_extension=.oe674 --preproc_with_compile --preproc_dependency="dss/dss_lvds_stream.d_raw" --obj_directory="dss" --cmd_file="configPkg/compiler.opt" "../dss/dss_lvds_stream.c"
+'Finished building: "../dss/dss_lvds_stream.c"'
+ 
+'Building file: "../dss/gesture.c"'
+'Invoking: C6000 Compiler'
+"C:/ti/ti-cgt-c6000_8.1.3/bin/cl6x" -mv6740 --abi=eabi -O3 -ms0 --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_dss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_dss/dss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_dss/common" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_dss/common/ANN" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages/ti/demo/utils" --include_path="C:/ti/mathlib_c674x_3_1_2_1/packages" --include_path="C:/ti/dsplib_c64Px_3_4_0_0/packages/" --include_path="C:/ti/dsplib_c64Px_3_4_0_0/packages/ti/dsplib/src/DSP_fft16x16/c64P" --include_path="C:/ti/dsplib_c64Px_3_4_0_0/packages/ti/dsplib/src/DSP_fft32x32/c64P" --include_path="C:/ti/ti-cgt-c6000_8.1.3/include" -g --gcc --define=SOC_XWR68XX --define=SUBSYS_DSS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DOWNLOAD_FROM_CCS --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=MMW_6843_ODS --diag_error=10015 --display_error_number --diag_wrap=off --diag_warning=225 --gen_func_subsections=on --obj_extension=.oe674 --preproc_with_compile --preproc_dependency="dss/gesture.d_raw" --obj_directory="dss" --cmd_file="configPkg/compiler.opt" "../dss/gesture.c"
+'Finished building: "../dss/gesture.c"'
+ 
+'Building file: "../dss/dss_main.c"'
+'Invoking: C6000 Compiler'
+"C:/ti/ti-cgt-c6000_8.1.3/bin/cl6x" -mv6740 --abi=eabi -O3 -ms0 --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_dss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_dss/dss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_dss/common" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_dss/common/ANN" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages/ti/demo/utils" --include_path="C:/ti/mathlib_c674x_3_1_2_1/packages" --include_path="C:/ti/dsplib_c64Px_3_4_0_0/packages/" --include_path="C:/ti/dsplib_c64Px_3_4_0_0/packages/ti/dsplib/src/DSP_fft16x16/c64P" --include_path="C:/ti/dsplib_c64Px_3_4_0_0/packages/ti/dsplib/src/DSP_fft32x32/c64P" --include_path="C:/ti/ti-cgt-c6000_8.1.3/include" -g --gcc --define=SOC_XWR68XX --define=SUBSYS_DSS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DOWNLOAD_FROM_CCS --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=MMW_6843_ODS --diag_error=10015 --display_error_number --diag_wrap=off --diag_warning=225 --gen_func_subsections=on --obj_extension=.oe674 --preproc_with_compile --preproc_dependency="dss/dss_main.d_raw" --obj_directory="dss" --cmd_file="configPkg/compiler.opt" "../dss/dss_main.c"
+'Finished building: "../dss/dss_main.c"'
+ 
+'Building file: "../dss/dss_data_path.c"'
+'Invoking: C6000 Compiler'
+"C:/ti/ti-cgt-c6000_8.1.3/bin/cl6x" -mv6740 --abi=eabi -O3 -ms0 --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_dss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_dss/dss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_dss/common" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_dss/common/ANN" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages/ti/demo/utils" --include_path="C:/ti/mathlib_c674x_3_1_2_1/packages" --include_path="C:/ti/dsplib_c64Px_3_4_0_0/packages/" --include_path="C:/ti/dsplib_c64Px_3_4_0_0/packages/ti/dsplib/src/DSP_fft16x16/c64P" --include_path="C:/ti/dsplib_c64Px_3_4_0_0/packages/ti/dsplib/src/DSP_fft32x32/c64P" --include_path="C:/ti/ti-cgt-c6000_8.1.3/include" -g --gcc --define=SOC_XWR68XX --define=SUBSYS_DSS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DOWNLOAD_FROM_CCS --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=MMW_6843_ODS --diag_error=10015 --display_error_number --diag_wrap=off --diag_warning=225 --gen_func_subsections=on --obj_extension=.oe674 --preproc_with_compile --preproc_dependency="dss/dss_data_path.d_raw" --obj_directory="dss" --cmd_file="configPkg/compiler.opt" "../dss/dss_data_path.c"
+'Finished building: "../dss/dss_data_path.c"'
+ 
+'Building target: "multi_gesture_68xx_dss.xe674"'
+'Invoking: C6000 Linker'
+"C:/ti/ti-cgt-c6000_8.1.3/bin/cl6x" -mv6740 --abi=eabi -O3 -ms0 -g --gcc --define=SOC_XWR68XX --define=SUBSYS_DSS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DOWNLOAD_FROM_CCS --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=MMW_6843_ODS --diag_error=10015 --display_error_number --diag_wrap=off --diag_warning=225 --gen_func_subsections=on --obj_extension=.oe674 -z -m"multi_gesture_68xx_dss.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ti-cgt-c6000_8.1.3/lib" -i"C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_dss" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/control/mmwave/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/control/mmwavelink/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/alg/mmwavelib/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/crc/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/soc/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/osal/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/mailbox/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/edma/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/adcbuf/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/cbuff/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/utils/hsiheader/lib" -i"C:/ti/dsplib_c64Px_3_4_0_0/packages/ti/dsplib/lib" -i"C:/ti/mathlib_c674x_3_1_2_1/packages/ti/mathlib/lib" -i"C:/ti/ti-cgt-c6000_8.1.3/include" --reread_libs --disable_auto_rts --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --warn_sections --diag_warning=225 --diag_error=10015 --display_error_number --diag_wrap=off --xml_link_info="xwr68xx_multi_gesture_68xx_dss_linkInfo.xml" --ram_model --unused_section_elimination=on -o "multi_gesture_68xx_dss.xe674" "./common/mmwDemo_monitor.oe674" "./dss/dss_config_edma_util.oe674" "./dss/dss_data_path.oe674" "./dss/dss_lvds_stream.oe674" "./dss/dss_main.oe674" "./dss/gesture.oe674" "../c674x_linker.cmd" "../dss/dss_mmw_linker.cmd" -l"configPkg/linker.cmd" -ldsplib.ae64P -lmathlib.ae674 -llibsoc_xwr68xx.ae674 -llibosal_xwr68xx.ae674 -llibcrc_xwr68xx.ae674 -llibmailbox_xwr68xx.ae674 -llibmmwavelink_xwr68xx.ae674 -llibmmwave_xwr68xx.ae674 -llibedma_xwr68xx.ae674 -llibadcbuf_xwr68xx.ae674 -llibmmwavealg_xwr68xx.ae674 -llibcbuff_xwr68xx.ae674 -llibhsiheader_xwr68xx.ae674 -lrts6740_elf.lib -llibc.a 
+<Linking>
+warning #10370-D: Possible codesize or performance degradation. Section ".text:MmwDemo_interFrameProcessing:dss_data_path.oe674" has calls to rts routines, but rts is placed out of range from call site at 0xe00e80, or in a different section. To optimize codesize, either 1) place rts closer to call site, or 2) place rts in same section, or 3) compile with --disable_push_pop.
+warning #10370-D: Possible codesize or performance degradation. Section ".text:MmwDemo_interFrameProcessing:dss_data_path.oe674" has calls to rts routines, but rts is placed out of range from call site at 0xe01548, or in a different section. To optimize codesize, either 1) place rts closer to call site, or 2) place rts in same section, or 3) compile with --disable_push_pop.
+warning #10370-D: Possible codesize or performance degradation. Section ".text:SOC_init:libsoc_xwr68xx.ae674<soc.oe674>" has calls to rts routines, but rts is placed out of range from call site at 0x20001930, or in a different section. To optimize codesize, either 1) place rts closer to call site, or 2) place rts in same section, or 3) compile with --disable_push_pop.
+warning #10370-D: Possible codesize or performance degradation. Section ".text:SOC_init:libsoc_xwr68xx.ae674<soc.oe674>" has calls to rts routines, but rts is placed out of range from call site at 0x20001820, or in a different section. To optimize codesize, either 1) place rts closer to call site, or 2) place rts in same section, or 3) compile with --disable_push_pop.
+'Finished building target: "multi_gesture_68xx_dss.xe674"'
+ 
+C:/ti/mmwave_sdk_03_01_01_02/packages/scripts/ImageCreator/out2rprc/out2rprc.exe multi_gesture_68xx_dss.xe674 multi_gesture_68xx_dss.bin
+Parsing the input object file, multi_gesture_68xx_dss.xe674.
+Appending zeros 8480736
+Appending zeros 8502528
+Appending zeros 8508184
+File conversion complete!
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project multi_gesture_68xx_mss ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+rm -f C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/Debug/multi_gesture_demo_68xx.bin
+makefile:196: recipe for target 'pre-build' failed
+process_begin: CreateProcess(NULL, rm -f C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/Debug/multi_gesture_demo_68xx.bin, ...) failed.
+make (e=2): Das System kann die angegebene Datei nicht finden.
+
+gmake[1]: [pre-build] Error 2 (ignored)
+ 
+'Building file: "../mss/mss_mmw.cfg"'
+'Invoking: XDCtools'
+"C:/ti/xdctools_3_50_08_24_core/xs" --xdcpath="C:/ti/bios_6_73_01_01/packages;C:/ti/ccsv7/ccs_base;" xdc.tools.configuro -o configPkg -t ti.targets.arm.elf.R4Ft -p ti.platforms.cortexR:IWR68XX:false:200 -r release -c "C:/ti/ti-cgt-arm_16.9.6.LTS" --compileOptions "--enum_type=int " "../mss/mss_mmw.cfg"
+making package.mak (because of package.bld) ...
+generating interfaces for package configPkg (because package/package.xdc.inc is older than package.xdc) ...
+configuring mss_mmw.xer4ft from package/cfg/mss_mmw_per4ft.cfg ...
+generating custom ti.sysbios library makefile ... 
+Starting build of library sources ...
+making C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss/src/sysbios/sysbios.aer4ft ...
+gmake[1]: Entering directory `C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss/src/sysbios'
+cler4ft C:/ti/bios_6_73_01_01/packages/ti/sysbios/BIOS.c ...
+asmer4ft C:/ti/bios_6_73_01_01/packages/ti/sysbios/family/arm/IntrinsicsSupport_asm.asm ...
+asmer4ft C:/ti/bios_6_73_01_01/packages/ti/sysbios/family/arm/TaskSupport_asm.asm ...
+asmer4ft C:/ti/bios_6_73_01_01/packages/ti/sysbios/family/arm/v7r/vim/Hwi_asm.sv7R ...
+asmer4ft C:/ti/bios_6_73_01_01/packages/ti/sysbios/family/arm/v7r/vim/Hwi_asm_switch.sv7R ...
+asmer4ft C:/ti/bios_6_73_01_01/packages/ti/sysbios/family/arm/exc/Exception_asm.asm ...
+asmer4ft C:/ti/bios_6_73_01_01/packages/ti/sysbios/family/arm/v7r/tms570/Core_asm.sv7R ...
+arer4ft BIOS.obj arm_IntrinsicsSupport_asm.obj arm_TaskSupport_asm.obj vim_Hwi_asm.obj vim_Hwi_asm_switch.obj exc_Exception_asm.obj tms570_Core_asm.obj ...
+gmake[1]: Leaving directory `C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss/src/sysbios'
+Build of libraries done.
+cler4ft package/cfg/mss_mmw_per4ft.c ...
+'Finished building: "../mss/mss_mmw.cfg"'
+ 
+'Building file: "../mss/inference.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7R4 --code_state=16 --float_support=VFPv3D16 -me -O3 --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common/ANN" --include_path="C:/ti/ti-cgt-arm_16.9.6.LTS/include" --define=SOC_XWR68XX --define=SUBSYS_MSS --define=DOWNLOAD_FROM_CCS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=APP_RESOURCE_FILE='<'ti/demo/xwr68xx/mmw/mmw_res.h'>' -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --enum_type=int --abi=eabi --obj_extension=.oer4f --preproc_with_compile --preproc_dependency="mss/inference.d_raw" --obj_directory="mss" --cmd_file="configPkg/compiler.opt" "../mss/inference.c"
+'Finished building: "../mss/inference.c"'
+ 
+'Building file: "../mss/utils.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7R4 --code_state=16 --float_support=VFPv3D16 -me -O3 --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common/ANN" --include_path="C:/ti/ti-cgt-arm_16.9.6.LTS/include" --define=SOC_XWR68XX --define=SUBSYS_MSS --define=DOWNLOAD_FROM_CCS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=APP_RESOURCE_FILE='<'ti/demo/xwr68xx/mmw/mmw_res.h'>' -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --enum_type=int --abi=eabi --obj_extension=.oer4f --preproc_with_compile --preproc_dependency="mss/utils.d_raw" --obj_directory="mss" --cmd_file="configPkg/compiler.opt" "../mss/utils.c"
+'Finished building: "../mss/utils.c"'
+ 
+'Building file: "../common/cli.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7R4 --code_state=16 --float_support=VFPv3D16 -me -O3 --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common/ANN" --include_path="C:/ti/ti-cgt-arm_16.9.6.LTS/include" --define=SOC_XWR68XX --define=SUBSYS_MSS --define=DOWNLOAD_FROM_CCS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=APP_RESOURCE_FILE='<'ti/demo/xwr68xx/mmw/mmw_res.h'>' -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --enum_type=int --abi=eabi --obj_extension=.oer4f --preproc_with_compile --preproc_dependency="common/cli.d_raw" --obj_directory="common" --cmd_file="configPkg/compiler.opt" "../common/cli.c"
+'Finished building: "../common/cli.c"'
+ 
+'Building file: "../common/cli_mmwave.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7R4 --code_state=16 --float_support=VFPv3D16 -me -O3 --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common/ANN" --include_path="C:/ti/ti-cgt-arm_16.9.6.LTS/include" --define=SOC_XWR68XX --define=SUBSYS_MSS --define=DOWNLOAD_FROM_CCS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=APP_RESOURCE_FILE='<'ti/demo/xwr68xx/mmw/mmw_res.h'>' -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --enum_type=int --abi=eabi --obj_extension=.oer4f --preproc_with_compile --preproc_dependency="common/cli_mmwave.d_raw" --obj_directory="common" --cmd_file="configPkg/compiler.opt" "../common/cli_mmwave.c"
+'Finished building: "../common/cli_mmwave.c"'
+ 
+'Building file: "../mss/mss_cli.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7R4 --code_state=16 --float_support=VFPv3D16 -me -O3 --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common/ANN" --include_path="C:/ti/ti-cgt-arm_16.9.6.LTS/include" --define=SOC_XWR68XX --define=SUBSYS_MSS --define=DOWNLOAD_FROM_CCS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=APP_RESOURCE_FILE='<'ti/demo/xwr68xx/mmw/mmw_res.h'>' -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --enum_type=int --abi=eabi --obj_extension=.oer4f --preproc_with_compile --preproc_dependency="mss/mss_cli.d_raw" --obj_directory="mss" --cmd_file="configPkg/compiler.opt" "../mss/mss_cli.c"
+'Finished building: "../mss/mss_cli.c"'
+ 
+'Building file: "../mss/mss_main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7R4 --code_state=16 --float_support=VFPv3D16 -me -O3 --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common/ANN" --include_path="C:/ti/ti-cgt-arm_16.9.6.LTS/include" --define=SOC_XWR68XX --define=SUBSYS_MSS --define=DOWNLOAD_FROM_CCS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=APP_RESOURCE_FILE='<'ti/demo/xwr68xx/mmw/mmw_res.h'>' -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --enum_type=int --abi=eabi --obj_extension=.oer4f --preproc_with_compile --preproc_dependency="mss/mss_main.d_raw" --obj_directory="mss" --cmd_file="configPkg/compiler.opt" "../mss/mss_main.c"
+'Finished building: "../mss/mss_main.c"'
+ 
+'Building target: "multi_gesture_68xx_mss.xer4f"'
+'Invoking: ARM Linker'
+"C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7R4 --code_state=16 --float_support=VFPv3D16 -me -O3 --define=SOC_XWR68XX --define=SUBSYS_MSS --define=DOWNLOAD_FROM_CCS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=APP_RESOURCE_FILE='<'ti/demo/xwr68xx/mmw/mmw_res.h'>' -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --enum_type=int --abi=eabi --obj_extension=.oer4f -z -m"multi_gesture_68xx_mss.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ti-cgt-arm_16.9.6.LTS/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/control/mmwave/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/control/mmwavelink/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/adcbuf/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/crc/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/dma/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/edma/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/esm/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/gpio/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/mailbox/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/osal/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/pinmux/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/soc/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/uart/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/utils/mathutils/lib" -i"C:/ti/ti-cgt-arm_16.9.6.LTS/include" --reread_libs --disable_auto_rts --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --diag_error=10015 --diag_warning=225 --diag_wrap=off --display_error_number --warn_sections --xml_link_info="multi_gesture_68xx_mss_linkInfo.xml" --rom_model --unused_section_elimination=on -o "multi_gesture_68xx_mss.xer4f" "./common/cli.oer4f" "./common/cli_mmwave.oer4f" "./mss/inference.oer4f" "./mss/mss_cli.oer4f" "./mss/mss_main.oer4f" "./mss/utils.oer4f" "../r4f_linker.cmd" "../mss/mss_mmw_linker.cmd" -l"configPkg/linker.cmd" -llibosal_xwr68xx.aer4f -llibesm_xwr68xx.aer4f -llibgpio_xwr68xx.aer4f -llibsoc_xwr68xx.aer4f -llibpinmux_xwr68xx.aer4f -llibcrc_xwr68xx.aer4f -llibuart_xwr68xx.aer4f -llibmailbox_xwr68xx.aer4f -llibmmwavelink_xwr68xx.aer4f -llibmmwave_xwr68xx.aer4f -llibadcbuf_xwr68xx.aer4f -llibdma_xwr68xx.aer4f -llibedma_xwr68xx.aer4f -llibmathutils.aer4f -lrtsv7R4_T_le_v3D16_eabi.lib -llibc.a 
+<Linking>
+'Finished building target: "multi_gesture_68xx_mss.xer4f"'
+ 
+C:/ti/mmwave_sdk_03_01_01_02/packages/scripts/ImageCreator/out2rprc/out2rprc.exe multi_gesture_68xx_mss.xer4f multi_gesture_68xx_mss.tmp
+Parsing the input object file, multi_gesture_68xx_mss.xer4f.
+Appending zeros 0
+Appending zeros 256
+File conversion complete!
+C:/ti/mmwave_sdk_03_01_01_02/packages/scripts/ImageCreator/multicore_image_generator/MulticoreImageGen.exe LE 37 0x02000006 multi_gesture_demo_68xx.bin 0x35510000 multi_gesture_68xx_mss.tmp 0xb5510000 C:/ti/mmwave_sdk_03_01_01_02/firmware/radarss/iwr6xxx_radarss_rprc.bin 0xd5510000 C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_dss/Debug/multi_gesture_68xx_dss.bin
+Number of Input Files 3
+Number of zeros 8
+Number of zeros 48
+Number of zeros 40
+
+C:/ti/mmwave_sdk_03_01_01_02/packages/scripts/ImageCreator/crc_multicore_image/crc_multicore_image.exe multi_gesture_demo_68xx.bin multi_gesture_demo_68xx.tmp
+size of App Image is 495360 bytes
+cur_crc_read_addr 128
+cur_crc_read_addr 102336
+cur_crc_read_addr 320000
+Failed to remove CRC temp file
+
+C:/ti/mmwave_sdk_03_01_01_02/packages/scripts/ImageCreator/append_bin_crc/gen_bincrc32.exe multi_gesture_demo_68xx.bin
+>>>> Binary CRC32 = 1a58d3c4 <<<<
+>>>> Total bytes in binary file 495364 <<<<
+
+ 
+
+**** Build Finished ****
+
+**** Clean-only build of configuration Debug for project multi_gesture_68xx_mss ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 8 clean -O 
+ 
+DEL /F  "multi_gesture_68xx_mss.hex"  "configPkg\linker.cmd" "configPkg\compiler.opt"  "multi_gesture_68xx_mss.xer4f" 
+RMDIR /S/Q  "configPkg\" 
+DEL /F "common\cli.oer4f" "common\cli_mmwave.oer4f" "mss\inference.oer4f" "mss\mss_cli.oer4f" "mss\mss_main.oer4f" "mss\utils.oer4f" 
+DEL /F "common\cli.d" "common\cli_mmwave.d" "mss\inference.d" "mss\mss_cli.d" "mss\mss_main.d" "mss\utils.d" 
+C:\Users\sonif\Documents\StudiumMaster\Semester3\Masterthesis\TI_modifiedFromTICommunity\multi_gesture_68xx_mss\Debug\multi_gesture_68xx_mss.hex konnte nicht gefunden werden
+'Finished clean'
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project multi_gesture_68xx_mss ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+rm -f C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/Debug/multi_gesture_demo_68xx.bin
+makefile:196: recipe for target 'pre-build' failed
+process_begin: CreateProcess(NULL, rm -f C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/Debug/multi_gesture_demo_68xx.bin, ...) failed.
+make (e=2): Das System kann die angegebene Datei nicht finden.
+
+gmake[1]: [pre-build] Error 2 (ignored)
+ 
+'Building file: "../mss/mss_mmw.cfg"'
+'Invoking: XDCtools'
+"C:/ti/xdctools_3_50_08_24_core/xs" --xdcpath="C:/ti/bios_6_73_01_01/packages;C:/ti/ccsv7/ccs_base;" xdc.tools.configuro -o configPkg -t ti.targets.arm.elf.R4Ft -p ti.platforms.cortexR:IWR68XX:false:200 -r release -c "C:/ti/ti-cgt-arm_16.9.6.LTS" --compileOptions "--enum_type=int " "../mss/mss_mmw.cfg"
+making package.mak (because of package.bld) ...
+generating interfaces for package configPkg (because package/package.xdc.inc is older than package.xdc) ...
+configuring mss_mmw.xer4ft from package/cfg/mss_mmw_per4ft.cfg ...
+generating custom ti.sysbios library makefile ... 
+Starting build of library sources ...
+making C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss/src/sysbios/sysbios.aer4ft ...
+gmake[1]: Entering directory `C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss/src/sysbios'
+gmake[1]: Nothing to be done for `all'.
+gmake[1]: Leaving directory `C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss/src/sysbios'
+Build of libraries done.
+cler4ft package/cfg/mss_mmw_per4ft.c ...
+'Finished building: "../mss/mss_mmw.cfg"'
+ 
+'Building file: "../mss/inference.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7R4 --code_state=16 --float_support=VFPv3D16 -me -O3 --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common/ANN" --include_path="C:/ti/ti-cgt-arm_16.9.6.LTS/include" --define=SOC_XWR68XX --define=SUBSYS_MSS --define=DOWNLOAD_FROM_CCS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=APP_RESOURCE_FILE='<'ti/demo/xwr68xx/mmw/mmw_res.h'>' -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --enum_type=int --abi=eabi --obj_extension=.oer4f --preproc_with_compile --preproc_dependency="mss/inference.d_raw" --obj_directory="mss" --cmd_file="configPkg/compiler.opt" "../mss/inference.c"
+'Finished building: "../mss/inference.c"'
+ 
+'Building file: "../mss/utils.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7R4 --code_state=16 --float_support=VFPv3D16 -me -O3 --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common/ANN" --include_path="C:/ti/ti-cgt-arm_16.9.6.LTS/include" --define=SOC_XWR68XX --define=SUBSYS_MSS --define=DOWNLOAD_FROM_CCS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=APP_RESOURCE_FILE='<'ti/demo/xwr68xx/mmw/mmw_res.h'>' -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --enum_type=int --abi=eabi --obj_extension=.oer4f --preproc_with_compile --preproc_dependency="mss/utils.d_raw" --obj_directory="mss" --cmd_file="configPkg/compiler.opt" "../mss/utils.c"
+'Finished building: "../mss/utils.c"'
+ 
+'Building file: "../common/cli.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7R4 --code_state=16 --float_support=VFPv3D16 -me -O3 --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common/ANN" --include_path="C:/ti/ti-cgt-arm_16.9.6.LTS/include" --define=SOC_XWR68XX --define=SUBSYS_MSS --define=DOWNLOAD_FROM_CCS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=APP_RESOURCE_FILE='<'ti/demo/xwr68xx/mmw/mmw_res.h'>' -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --enum_type=int --abi=eabi --obj_extension=.oer4f --preproc_with_compile --preproc_dependency="common/cli.d_raw" --obj_directory="common" --cmd_file="configPkg/compiler.opt" "../common/cli.c"
+'Finished building: "../common/cli.c"'
+ 
+'Building file: "../common/cli_mmwave.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7R4 --code_state=16 --float_support=VFPv3D16 -me -O3 --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common/ANN" --include_path="C:/ti/ti-cgt-arm_16.9.6.LTS/include" --define=SOC_XWR68XX --define=SUBSYS_MSS --define=DOWNLOAD_FROM_CCS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=APP_RESOURCE_FILE='<'ti/demo/xwr68xx/mmw/mmw_res.h'>' -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --enum_type=int --abi=eabi --obj_extension=.oer4f --preproc_with_compile --preproc_dependency="common/cli_mmwave.d_raw" --obj_directory="common" --cmd_file="configPkg/compiler.opt" "../common/cli_mmwave.c"
+'Finished building: "../common/cli_mmwave.c"'
+ 
+'Building file: "../mss/mss_cli.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7R4 --code_state=16 --float_support=VFPv3D16 -me -O3 --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common/ANN" --include_path="C:/ti/ti-cgt-arm_16.9.6.LTS/include" --define=SOC_XWR68XX --define=SUBSYS_MSS --define=DOWNLOAD_FROM_CCS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=APP_RESOURCE_FILE='<'ti/demo/xwr68xx/mmw/mmw_res.h'>' -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --enum_type=int --abi=eabi --obj_extension=.oer4f --preproc_with_compile --preproc_dependency="mss/mss_cli.d_raw" --obj_directory="mss" --cmd_file="configPkg/compiler.opt" "../mss/mss_cli.c"
+'Finished building: "../mss/mss_cli.c"'
+ 
+'Building file: "../mss/mss_main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7R4 --code_state=16 --float_support=VFPv3D16 -me -O3 --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common/ANN" --include_path="C:/ti/ti-cgt-arm_16.9.6.LTS/include" --define=SOC_XWR68XX --define=SUBSYS_MSS --define=DOWNLOAD_FROM_CCS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=APP_RESOURCE_FILE='<'ti/demo/xwr68xx/mmw/mmw_res.h'>' -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --enum_type=int --abi=eabi --obj_extension=.oer4f --preproc_with_compile --preproc_dependency="mss/mss_main.d_raw" --obj_directory="mss" --cmd_file="configPkg/compiler.opt" "../mss/mss_main.c"
+'Finished building: "../mss/mss_main.c"'
+ 
+'Building target: "multi_gesture_68xx_mss.xer4f"'
+'Invoking: ARM Linker'
+"C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7R4 --code_state=16 --float_support=VFPv3D16 -me -O3 --define=SOC_XWR68XX --define=SUBSYS_MSS --define=DOWNLOAD_FROM_CCS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=APP_RESOURCE_FILE='<'ti/demo/xwr68xx/mmw/mmw_res.h'>' -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --enum_type=int --abi=eabi --obj_extension=.oer4f -z -m"multi_gesture_68xx_mss.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ti-cgt-arm_16.9.6.LTS/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/control/mmwave/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/control/mmwavelink/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/adcbuf/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/crc/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/dma/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/edma/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/esm/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/gpio/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/mailbox/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/osal/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/pinmux/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/soc/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/uart/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/utils/mathutils/lib" -i"C:/ti/ti-cgt-arm_16.9.6.LTS/include" --reread_libs --disable_auto_rts --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --diag_error=10015 --diag_warning=225 --diag_wrap=off --display_error_number --warn_sections --xml_link_info="multi_gesture_68xx_mss_linkInfo.xml" --rom_model --unused_section_elimination=on -o "multi_gesture_68xx_mss.xer4f" "./common/cli.oer4f" "./common/cli_mmwave.oer4f" "./mss/inference.oer4f" "./mss/mss_cli.oer4f" "./mss/mss_main.oer4f" "./mss/utils.oer4f" "../r4f_linker.cmd" "../mss/mss_mmw_linker.cmd" -l"configPkg/linker.cmd" -llibosal_xwr68xx.aer4f -llibesm_xwr68xx.aer4f -llibgpio_xwr68xx.aer4f -llibsoc_xwr68xx.aer4f -llibpinmux_xwr68xx.aer4f -llibcrc_xwr68xx.aer4f -llibuart_xwr68xx.aer4f -llibmailbox_xwr68xx.aer4f -llibmmwavelink_xwr68xx.aer4f -llibmmwave_xwr68xx.aer4f -llibadcbuf_xwr68xx.aer4f -llibdma_xwr68xx.aer4f -llibedma_xwr68xx.aer4f -llibmathutils.aer4f -lrtsv7R4_T_le_v3D16_eabi.lib -llibc.a 
+<Linking>
+'Finished building target: "multi_gesture_68xx_mss.xer4f"'
+ 
+C:/ti/mmwave_sdk_03_01_01_02/packages/scripts/ImageCreator/out2rprc/out2rprc.exe multi_gesture_68xx_mss.xer4f multi_gesture_68xx_mss.tmp
+Parsing the input object file, multi_gesture_68xx_mss.xer4f.
+Appending zeros 0
+Appending zeros 256
+File conversion complete!
+C:/ti/mmwave_sdk_03_01_01_02/packages/scripts/ImageCreator/multicore_image_generator/MulticoreImageGen.exe LE 37 0x02000006 multi_gesture_demo_68xx.bin 0x35510000 multi_gesture_68xx_mss.tmp 0xb5510000 C:/ti/mmwave_sdk_03_01_01_02/firmware/radarss/iwr6xxx_radarss_rprc.bin 0xd5510000 C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_dss/Debug/multi_gesture_68xx_dss.bin
+Number of Input Files 3
+Number of zeros 8
+Number of zeros 48
+Number of zeros 40
+
+C:/ti/mmwave_sdk_03_01_01_02/packages/scripts/ImageCreator/crc_multicore_image/crc_multicore_image.exe multi_gesture_demo_68xx.bin multi_gesture_demo_68xx.tmp
+size of App Image is 495360 bytes
+cur_crc_read_addr 128
+cur_crc_read_addr 102336
+cur_crc_read_addr 320000
+Failed to remove CRC temp file
+
+C:/ti/mmwave_sdk_03_01_01_02/packages/scripts/ImageCreator/append_bin_crc/gen_bincrc32.exe multi_gesture_demo_68xx.bin
+>>>> Binary CRC32 = 1a58d3c4 <<<<
+>>>> Total bytes in binary file 495364 <<<<
+
+ 
+
+**** Build Finished ****
+
+**** Clean-only build of configuration Debug for project multi_gesture_68xx_mss ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 8 clean -O 
+ 
+DEL /F  "multi_gesture_68xx_mss.hex"  "configPkg\linker.cmd" "configPkg\compiler.opt"  "multi_gesture_68xx_mss.xer4f" 
+RMDIR /S/Q  "configPkg\" 
+DEL /F "common\cli.oer4f" "common\cli_mmwave.oer4f" "mss\inference.oer4f" "mss\mss_cli.oer4f" "mss\mss_main.oer4f" "mss\utils.oer4f" 
+DEL /F "common\cli.d" "common\cli_mmwave.d" "mss\inference.d" "mss\mss_cli.d" "mss\mss_main.d" "mss\utils.d" 
+C:\Users\sonif\Documents\StudiumMaster\Semester3\Masterthesis\TI_modifiedFromTICommunity\multi_gesture_68xx_mss\Debug\multi_gesture_68xx_mss.hex konnte nicht gefunden werden
+'Finished clean'
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project multi_gesture_68xx_mss ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+rm -f C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/Debug/multi_gesture_demo_68xx.bin
+makefile:196: recipe for target 'pre-build' failed
+process_begin: CreateProcess(NULL, rm -f C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/Debug/multi_gesture_demo_68xx.bin, ...) failed.
+make (e=2): Das System kann die angegebene Datei nicht finden.
+
+gmake[1]: [pre-build] Error 2 (ignored)
+ 
+'Building file: "../mss/mss_mmw.cfg"'
+'Invoking: XDCtools'
+"C:/ti/xdctools_3_50_08_24_core/xs" --xdcpath="C:/ti/bios_6_73_01_01/packages;C:/ti/ccsv7/ccs_base;" xdc.tools.configuro -o configPkg -t ti.targets.arm.elf.R4Ft -p ti.platforms.cortexR:IWR68XX:false:200 -r release -c "C:/ti/ti-cgt-arm_16.9.6.LTS" --compileOptions "--enum_type=int " "../mss/mss_mmw.cfg"
+making package.mak (because of package.bld) ...
+generating interfaces for package configPkg (because package/package.xdc.inc is older than package.xdc) ...
+configuring mss_mmw.xer4ft from package/cfg/mss_mmw_per4ft.cfg ...
+generating custom ti.sysbios library makefile ... 
+Starting build of library sources ...
+making C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss/src/sysbios/sysbios.aer4ft ...
+gmake[1]: Entering directory `C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss/src/sysbios'
+gmake[1]: Nothing to be done for `all'.
+gmake[1]: Leaving directory `C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss/src/sysbios'
+Build of libraries done.
+cler4ft package/cfg/mss_mmw_per4ft.c ...
+'Finished building: "../mss/mss_mmw.cfg"'
+ 
+'Building file: "../mss/inference.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7R4 --code_state=16 --float_support=VFPv3D16 -me -O3 --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common/ANN" --include_path="C:/ti/ti-cgt-arm_16.9.6.LTS/include" --define=SOC_XWR68XX --define=SUBSYS_MSS --define=DOWNLOAD_FROM_CCS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=APP_RESOURCE_FILE='<'ti/demo/xwr68xx/mmw/mmw_res.h'>' -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --enum_type=int --abi=eabi --obj_extension=.oer4f --preproc_with_compile --preproc_dependency="mss/inference.d_raw" --obj_directory="mss" --cmd_file="configPkg/compiler.opt" "../mss/inference.c"
+'Finished building: "../mss/inference.c"'
+ 
+'Building file: "../mss/utils.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7R4 --code_state=16 --float_support=VFPv3D16 -me -O3 --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common/ANN" --include_path="C:/ti/ti-cgt-arm_16.9.6.LTS/include" --define=SOC_XWR68XX --define=SUBSYS_MSS --define=DOWNLOAD_FROM_CCS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=APP_RESOURCE_FILE='<'ti/demo/xwr68xx/mmw/mmw_res.h'>' -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --enum_type=int --abi=eabi --obj_extension=.oer4f --preproc_with_compile --preproc_dependency="mss/utils.d_raw" --obj_directory="mss" --cmd_file="configPkg/compiler.opt" "../mss/utils.c"
+'Finished building: "../mss/utils.c"'
+ 
+'Building file: "../common/cli.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7R4 --code_state=16 --float_support=VFPv3D16 -me -O3 --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common/ANN" --include_path="C:/ti/ti-cgt-arm_16.9.6.LTS/include" --define=SOC_XWR68XX --define=SUBSYS_MSS --define=DOWNLOAD_FROM_CCS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=APP_RESOURCE_FILE='<'ti/demo/xwr68xx/mmw/mmw_res.h'>' -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --enum_type=int --abi=eabi --obj_extension=.oer4f --preproc_with_compile --preproc_dependency="common/cli.d_raw" --obj_directory="common" --cmd_file="configPkg/compiler.opt" "../common/cli.c"
+'Finished building: "../common/cli.c"'
+ 
+'Building file: "../common/cli_mmwave.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7R4 --code_state=16 --float_support=VFPv3D16 -me -O3 --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common/ANN" --include_path="C:/ti/ti-cgt-arm_16.9.6.LTS/include" --define=SOC_XWR68XX --define=SUBSYS_MSS --define=DOWNLOAD_FROM_CCS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=APP_RESOURCE_FILE='<'ti/demo/xwr68xx/mmw/mmw_res.h'>' -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --enum_type=int --abi=eabi --obj_extension=.oer4f --preproc_with_compile --preproc_dependency="common/cli_mmwave.d_raw" --obj_directory="common" --cmd_file="configPkg/compiler.opt" "../common/cli_mmwave.c"
+'Finished building: "../common/cli_mmwave.c"'
+ 
+'Building file: "../mss/mss_cli.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7R4 --code_state=16 --float_support=VFPv3D16 -me -O3 --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common/ANN" --include_path="C:/ti/ti-cgt-arm_16.9.6.LTS/include" --define=SOC_XWR68XX --define=SUBSYS_MSS --define=DOWNLOAD_FROM_CCS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=APP_RESOURCE_FILE='<'ti/demo/xwr68xx/mmw/mmw_res.h'>' -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --enum_type=int --abi=eabi --obj_extension=.oer4f --preproc_with_compile --preproc_dependency="mss/mss_cli.d_raw" --obj_directory="mss" --cmd_file="configPkg/compiler.opt" "../mss/mss_cli.c"
+'Finished building: "../mss/mss_cli.c"'
+ 
+'Building file: "../mss/mss_main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7R4 --code_state=16 --float_support=VFPv3D16 -me -O3 --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common/ANN" --include_path="C:/ti/ti-cgt-arm_16.9.6.LTS/include" --define=SOC_XWR68XX --define=SUBSYS_MSS --define=DOWNLOAD_FROM_CCS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=APP_RESOURCE_FILE='<'ti/demo/xwr68xx/mmw/mmw_res.h'>' -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --enum_type=int --abi=eabi --obj_extension=.oer4f --preproc_with_compile --preproc_dependency="mss/mss_main.d_raw" --obj_directory="mss" --cmd_file="configPkg/compiler.opt" "../mss/mss_main.c"
+'Finished building: "../mss/mss_main.c"'
+ 
+'Building target: "multi_gesture_68xx_mss.xer4f"'
+'Invoking: ARM Linker'
+"C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7R4 --code_state=16 --float_support=VFPv3D16 -me -O3 --define=SOC_XWR68XX --define=SUBSYS_MSS --define=DOWNLOAD_FROM_CCS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=APP_RESOURCE_FILE='<'ti/demo/xwr68xx/mmw/mmw_res.h'>' -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --enum_type=int --abi=eabi --obj_extension=.oer4f -z -m"multi_gesture_68xx_mss.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ti-cgt-arm_16.9.6.LTS/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/control/mmwave/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/control/mmwavelink/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/adcbuf/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/crc/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/dma/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/edma/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/esm/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/gpio/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/mailbox/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/osal/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/pinmux/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/soc/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/uart/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/utils/mathutils/lib" -i"C:/ti/ti-cgt-arm_16.9.6.LTS/include" --reread_libs --disable_auto_rts --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --diag_error=10015 --diag_warning=225 --diag_wrap=off --display_error_number --warn_sections --xml_link_info="multi_gesture_68xx_mss_linkInfo.xml" --rom_model --unused_section_elimination=on -o "multi_gesture_68xx_mss.xer4f" "./common/cli.oer4f" "./common/cli_mmwave.oer4f" "./mss/inference.oer4f" "./mss/mss_cli.oer4f" "./mss/mss_main.oer4f" "./mss/utils.oer4f" "../r4f_linker.cmd" "../mss/mss_mmw_linker.cmd" -l"configPkg/linker.cmd" -llibosal_xwr68xx.aer4f -llibesm_xwr68xx.aer4f -llibgpio_xwr68xx.aer4f -llibsoc_xwr68xx.aer4f -llibpinmux_xwr68xx.aer4f -llibcrc_xwr68xx.aer4f -llibuart_xwr68xx.aer4f -llibmailbox_xwr68xx.aer4f -llibmmwavelink_xwr68xx.aer4f -llibmmwave_xwr68xx.aer4f -llibadcbuf_xwr68xx.aer4f -llibdma_xwr68xx.aer4f -llibedma_xwr68xx.aer4f -llibmathutils.aer4f -lrtsv7R4_T_le_v3D16_eabi.lib -llibc.a 
+<Linking>
+'Finished building target: "multi_gesture_68xx_mss.xer4f"'
+ 
+C:/ti/mmwave_sdk_03_01_01_02/packages/scripts/ImageCreator/out2rprc/out2rprc.exe multi_gesture_68xx_mss.xer4f multi_gesture_68xx_mss.tmp
+Parsing the input object file, multi_gesture_68xx_mss.xer4f.
+Appending zeros 0
+Appending zeros 256
+File conversion complete!
+C:/ti/mmwave_sdk_03_01_01_02/packages/scripts/ImageCreator/multicore_image_generator/MulticoreImageGen.exe LE 37 0x02000006 multi_gesture_demo_68xx.bin 0x35510000 multi_gesture_68xx_mss.tmp 0xb5510000 C:/ti/mmwave_sdk_03_01_01_02/firmware/radarss/iwr6xxx_radarss_rprc.bin 0xd5510000 C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_dss/Debug/multi_gesture_68xx_dss.bin
+Number of Input Files 3
+Number of zeros 40
+Number of zeros 48
+Number of zeros 40
+
+C:/ti/mmwave_sdk_03_01_01_02/packages/scripts/ImageCreator/crc_multicore_image/crc_multicore_image.exe multi_gesture_demo_68xx.bin multi_gesture_demo_68xx.tmp
+size of App Image is 495424 bytes
+cur_crc_read_addr 128
+cur_crc_read_addr 102400
+cur_crc_read_addr 320064
+Failed to remove CRC temp file
+
+C:/ti/mmwave_sdk_03_01_01_02/packages/scripts/ImageCreator/append_bin_crc/gen_bincrc32.exe multi_gesture_demo_68xx.bin
+>>>> Binary CRC32 = c7a020eb <<<<
+>>>> Total bytes in binary file 495428 <<<<
+
+ 
+
+**** Build Finished ****
+
+**** Clean-only build of configuration Debug for project multi_gesture_68xx_mss ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 8 clean -O 
+ 
+DEL /F  "multi_gesture_68xx_mss.hex"  "configPkg\linker.cmd" "configPkg\compiler.opt"  "multi_gesture_68xx_mss.xer4f" 
+RMDIR /S/Q  "configPkg\" 
+DEL /F "common\cli.oer4f" "common\cli_mmwave.oer4f" "mss\inference.oer4f" "mss\mss_cli.oer4f" "mss\mss_main.oer4f" "mss\utils.oer4f" 
+DEL /F "common\cli.d" "common\cli_mmwave.d" "mss\inference.d" "mss\mss_cli.d" "mss\mss_main.d" "mss\utils.d" 
+C:\Users\sonif\Documents\StudiumMaster\Semester3\Masterthesis\TI_modifiedFromTICommunity\multi_gesture_68xx_mss\Debug\multi_gesture_68xx_mss.hex konnte nicht gefunden werden
+'Finished clean'
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project multi_gesture_68xx_mss ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+rm -f C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/Debug/multi_gesture_demo_68xx.bin
+makefile:196: recipe for target 'pre-build' failed
+process_begin: CreateProcess(NULL, rm -f C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/Debug/multi_gesture_demo_68xx.bin, ...) failed.
+make (e=2): Das System kann die angegebene Datei nicht finden.
+
+gmake[1]: [pre-build] Error 2 (ignored)
+ 
+'Building file: "../mss/mss_mmw.cfg"'
+'Invoking: XDCtools'
+"C:/ti/xdctools_3_50_08_24_core/xs" --xdcpath="C:/ti/bios_6_73_01_01/packages;C:/ti/ccsv7/ccs_base;" xdc.tools.configuro -o configPkg -t ti.targets.arm.elf.R4Ft -p ti.platforms.cortexR:IWR68XX:false:200 -r release -c "C:/ti/ti-cgt-arm_16.9.6.LTS" --compileOptions "--enum_type=int " "../mss/mss_mmw.cfg"
+making package.mak (because of package.bld) ...
+generating interfaces for package configPkg (because package/package.xdc.inc is older than package.xdc) ...
+configuring mss_mmw.xer4ft from package/cfg/mss_mmw_per4ft.cfg ...
+generating custom ti.sysbios library makefile ... 
+Starting build of library sources ...
+making C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss/src/sysbios/sysbios.aer4ft ...
+gmake[1]: Entering directory `C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss/src/sysbios'
+gmake[1]: Nothing to be done for `all'.
+gmake[1]: Leaving directory `C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss/src/sysbios'
+Build of libraries done.
+cler4ft package/cfg/mss_mmw_per4ft.c ...
+'Finished building: "../mss/mss_mmw.cfg"'
+ 
+'Building file: "../mss/inference.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7R4 --code_state=16 --float_support=VFPv3D16 -me -O3 --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common/ANN" --include_path="C:/ti/ti-cgt-arm_16.9.6.LTS/include" --define=SOC_XWR68XX --define=SUBSYS_MSS --define=DOWNLOAD_FROM_CCS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=APP_RESOURCE_FILE='<'ti/demo/xwr68xx/mmw/mmw_res.h'>' -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --enum_type=int --abi=eabi --obj_extension=.oer4f --preproc_with_compile --preproc_dependency="mss/inference.d_raw" --obj_directory="mss" --cmd_file="configPkg/compiler.opt" "../mss/inference.c"
+'Finished building: "../mss/inference.c"'
+ 
+'Building file: "../mss/mss_main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7R4 --code_state=16 --float_support=VFPv3D16 -me -O3 --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common/ANN" --include_path="C:/ti/ti-cgt-arm_16.9.6.LTS/include" --define=SOC_XWR68XX --define=SUBSYS_MSS --define=DOWNLOAD_FROM_CCS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=APP_RESOURCE_FILE='<'ti/demo/xwr68xx/mmw/mmw_res.h'>' -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --enum_type=int --abi=eabi --obj_extension=.oer4f --preproc_with_compile --preproc_dependency="mss/mss_main.d_raw" --obj_directory="mss" --cmd_file="configPkg/compiler.opt" "../mss/mss_main.c"
+
+>> Compilation failure
+mss/subdir_rules.mk:23: recipe for target 'mss/mss_main.oer4f' failed
+"../mss/mss_main.c", line 2252: error #29: expected an expression
+"../mss/mss_main.c", line 2252: warning #551-D: variable "featureIdx" is used before its value is set
+"../mss/mss_main.c", line 2258: error #20: identifier "azmi" is undefined
+"../mss/mss_main.c", line 2261: error #20: identifier "sum_dopY" is undefined
+"../mss/mss_main.c", line 2269: error #20: identifier "n" is undefined
+4 errors detected in the compilation of "../mss/mss_main.c".
+gmake[1]: *** [mss/mss_main.oer4f] Error 1
+'Building file: "../mss/utils.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7R4 --code_state=16 --float_support=VFPv3D16 -me -O3 --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common/ANN" --include_path="C:/ti/ti-cgt-arm_16.9.6.LTS/include" --define=SOC_XWR68XX --define=SUBSYS_MSS --define=DOWNLOAD_FROM_CCS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=APP_RESOURCE_FILE='<'ti/demo/xwr68xx/mmw/mmw_res.h'>' -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --enum_type=int --abi=eabi --obj_extension=.oer4f --preproc_with_compile --preproc_dependency="mss/utils.d_raw" --obj_directory="mss" --cmd_file="configPkg/compiler.opt" "../mss/utils.c"
+'Finished building: "../mss/utils.c"'
+ 
+'Building file: "../common/cli.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7R4 --code_state=16 --float_support=VFPv3D16 -me -O3 --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common/ANN" --include_path="C:/ti/ti-cgt-arm_16.9.6.LTS/include" --define=SOC_XWR68XX --define=SUBSYS_MSS --define=DOWNLOAD_FROM_CCS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=APP_RESOURCE_FILE='<'ti/demo/xwr68xx/mmw/mmw_res.h'>' -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --enum_type=int --abi=eabi --obj_extension=.oer4f --preproc_with_compile --preproc_dependency="common/cli.d_raw" --obj_directory="common" --cmd_file="configPkg/compiler.opt" "../common/cli.c"
+'Finished building: "../common/cli.c"'
+ 
+'Building file: "../common/cli_mmwave.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7R4 --code_state=16 --float_support=VFPv3D16 -me -O3 --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common/ANN" --include_path="C:/ti/ti-cgt-arm_16.9.6.LTS/include" --define=SOC_XWR68XX --define=SUBSYS_MSS --define=DOWNLOAD_FROM_CCS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=APP_RESOURCE_FILE='<'ti/demo/xwr68xx/mmw/mmw_res.h'>' -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --enum_type=int --abi=eabi --obj_extension=.oer4f --preproc_with_compile --preproc_dependency="common/cli_mmwave.d_raw" --obj_directory="common" --cmd_file="configPkg/compiler.opt" "../common/cli_mmwave.c"
+'Finished building: "../common/cli_mmwave.c"'
+ 
+'Building file: "../mss/mss_cli.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7R4 --code_state=16 --float_support=VFPv3D16 -me -O3 --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common/ANN" --include_path="C:/ti/ti-cgt-arm_16.9.6.LTS/include" --define=SOC_XWR68XX --define=SUBSYS_MSS --define=DOWNLOAD_FROM_CCS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=APP_RESOURCE_FILE='<'ti/demo/xwr68xx/mmw/mmw_res.h'>' -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --enum_type=int --abi=eabi --obj_extension=.oer4f --preproc_with_compile --preproc_dependency="mss/mss_cli.d_raw" --obj_directory="mss" --cmd_file="configPkg/compiler.opt" "../mss/mss_cli.c"
+gmake[1]: Target 'main-build' not remade because of errors.
+'Finished building: "../mss/mss_cli.c"'
+ 
+makefile:162: recipe for target 'all' failed
+gmake: *** [all] Error 2
+
+**** Build Finished ****
+
+**** Clean-only build of configuration Debug for project multi_gesture_68xx_mss ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 8 clean -O 
+ 
+DEL /F  "multi_gesture_68xx_mss.hex"  "configPkg\linker.cmd" "configPkg\compiler.opt"  "multi_gesture_68xx_mss.xer4f" 
+RMDIR /S/Q  "configPkg\" 
+DEL /F "common\cli.oer4f" "common\cli_mmwave.oer4f" "mss\inference.oer4f" "mss\mss_cli.oer4f" "mss\mss_main.oer4f" "mss\utils.oer4f" 
+DEL /F "common\cli.d" "common\cli_mmwave.d" "mss\inference.d" "mss\mss_cli.d" "mss\mss_main.d" "mss\utils.d" 
+C:\Users\sonif\Documents\StudiumMaster\Semester3\Masterthesis\TI_modifiedFromTICommunity\multi_gesture_68xx_mss\Debug\multi_gesture_68xx_mss.hex konnte nicht gefunden werden
+C:\Users\sonif\Documents\StudiumMaster\Semester3\Masterthesis\TI_modifiedFromTICommunity\multi_gesture_68xx_mss\Debug\multi_gesture_68xx_mss.xer4f konnte nicht gefunden werden
+'Finished clean'
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project multi_gesture_68xx_mss ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+rm -f C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/Debug/multi_gesture_demo_68xx.bin
+makefile:196: recipe for target 'pre-build' failed
+process_begin: CreateProcess(NULL, rm -f C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/Debug/multi_gesture_demo_68xx.bin, ...) failed.
+make (e=2): Das System kann die angegebene Datei nicht finden.
+
+gmake[1]: [pre-build] Error 2 (ignored)
+ 
+'Building file: "../mss/mss_mmw.cfg"'
+'Invoking: XDCtools'
+"C:/ti/xdctools_3_50_08_24_core/xs" --xdcpath="C:/ti/bios_6_73_01_01/packages;C:/ti/ccsv7/ccs_base;" xdc.tools.configuro -o configPkg -t ti.targets.arm.elf.R4Ft -p ti.platforms.cortexR:IWR68XX:false:200 -r release -c "C:/ti/ti-cgt-arm_16.9.6.LTS" --compileOptions "--enum_type=int " "../mss/mss_mmw.cfg"
+making package.mak (because of package.bld) ...
+generating interfaces for package configPkg (because package/package.xdc.inc is older than package.xdc) ...
+configuring mss_mmw.xer4ft from package/cfg/mss_mmw_per4ft.cfg ...
+generating custom ti.sysbios library makefile ... 
+Starting build of library sources ...
+making C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss/src/sysbios/sysbios.aer4ft ...
+gmake[1]: Entering directory `C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss/src/sysbios'
+gmake[1]: Nothing to be done for `all'.
+gmake[1]: Leaving directory `C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss/src/sysbios'
+Build of libraries done.
+cler4ft package/cfg/mss_mmw_per4ft.c ...
+'Finished building: "../mss/mss_mmw.cfg"'
+ 
+'Building file: "../mss/inference.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7R4 --code_state=16 --float_support=VFPv3D16 -me -O3 --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common/ANN" --include_path="C:/ti/ti-cgt-arm_16.9.6.LTS/include" --define=SOC_XWR68XX --define=SUBSYS_MSS --define=DOWNLOAD_FROM_CCS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=APP_RESOURCE_FILE='<'ti/demo/xwr68xx/mmw/mmw_res.h'>' -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --enum_type=int --abi=eabi --obj_extension=.oer4f --preproc_with_compile --preproc_dependency="mss/inference.d_raw" --obj_directory="mss" --cmd_file="configPkg/compiler.opt" "../mss/inference.c"
+'Finished building: "../mss/inference.c"'
+ 
+'Building file: "../mss/mss_main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7R4 --code_state=16 --float_support=VFPv3D16 -me -O3 --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common/ANN" --include_path="C:/ti/ti-cgt-arm_16.9.6.LTS/include" --define=SOC_XWR68XX --define=SUBSYS_MSS --define=DOWNLOAD_FROM_CCS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=APP_RESOURCE_FILE='<'ti/demo/xwr68xx/mmw/mmw_res.h'>' -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --enum_type=int --abi=eabi --obj_extension=.oer4f --preproc_with_compile --preproc_dependency="mss/mss_main.d_raw" --obj_directory="mss" --cmd_file="configPkg/compiler.opt" "../mss/mss_main.c"
+
+>> Compilation failure
+mss/subdir_rules.mk:23: recipe for target 'mss/mss_main.oer4f' failed
+"../mss/mss_main.c", line 2258: error #20: identifier "azmi" is undefined
+1 error detected in the compilation of "../mss/mss_main.c".
+gmake[1]: *** [mss/mss_main.oer4f] Error 1
+'Building file: "../mss/utils.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7R4 --code_state=16 --float_support=VFPv3D16 -me -O3 --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common/ANN" --include_path="C:/ti/ti-cgt-arm_16.9.6.LTS/include" --define=SOC_XWR68XX --define=SUBSYS_MSS --define=DOWNLOAD_FROM_CCS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=APP_RESOURCE_FILE='<'ti/demo/xwr68xx/mmw/mmw_res.h'>' -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --enum_type=int --abi=eabi --obj_extension=.oer4f --preproc_with_compile --preproc_dependency="mss/utils.d_raw" --obj_directory="mss" --cmd_file="configPkg/compiler.opt" "../mss/utils.c"
+'Finished building: "../mss/utils.c"'
+ 
+'Building file: "../common/cli.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7R4 --code_state=16 --float_support=VFPv3D16 -me -O3 --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common/ANN" --include_path="C:/ti/ti-cgt-arm_16.9.6.LTS/include" --define=SOC_XWR68XX --define=SUBSYS_MSS --define=DOWNLOAD_FROM_CCS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=APP_RESOURCE_FILE='<'ti/demo/xwr68xx/mmw/mmw_res.h'>' -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --enum_type=int --abi=eabi --obj_extension=.oer4f --preproc_with_compile --preproc_dependency="common/cli.d_raw" --obj_directory="common" --cmd_file="configPkg/compiler.opt" "../common/cli.c"
+'Finished building: "../common/cli.c"'
+ 
+'Building file: "../common/cli_mmwave.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7R4 --code_state=16 --float_support=VFPv3D16 -me -O3 --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common/ANN" --include_path="C:/ti/ti-cgt-arm_16.9.6.LTS/include" --define=SOC_XWR68XX --define=SUBSYS_MSS --define=DOWNLOAD_FROM_CCS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=APP_RESOURCE_FILE='<'ti/demo/xwr68xx/mmw/mmw_res.h'>' -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --enum_type=int --abi=eabi --obj_extension=.oer4f --preproc_with_compile --preproc_dependency="common/cli_mmwave.d_raw" --obj_directory="common" --cmd_file="configPkg/compiler.opt" "../common/cli_mmwave.c"
+'Finished building: "../common/cli_mmwave.c"'
+ 
+'Building file: "../mss/mss_cli.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7R4 --code_state=16 --float_support=VFPv3D16 -me -O3 --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common/ANN" --include_path="C:/ti/ti-cgt-arm_16.9.6.LTS/include" --define=SOC_XWR68XX --define=SUBSYS_MSS --define=DOWNLOAD_FROM_CCS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=APP_RESOURCE_FILE='<'ti/demo/xwr68xx/mmw/mmw_res.h'>' -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --enum_type=int --abi=eabi --obj_extension=.oer4f --preproc_with_compile --preproc_dependency="mss/mss_cli.d_raw" --obj_directory="mss" --cmd_file="configPkg/compiler.opt" "../mss/mss_cli.c"
+gmake[1]: Target 'main-build' not remade because of errors.
+gmake: *** [all] Error 2
+'Finished building: "../mss/mss_cli.c"'
+ 
+makefile:162: recipe for target 'all' failed
+
+**** Build Finished ****
+
+**** Clean-only build of configuration Debug for project multi_gesture_68xx_mss ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 8 clean -O 
+ 
+DEL /F  "multi_gesture_68xx_mss.hex"  "configPkg\linker.cmd" "configPkg\compiler.opt"  "multi_gesture_68xx_mss.xer4f" 
+RMDIR /S/Q  "configPkg\" 
+DEL /F "common\cli.oer4f" "common\cli_mmwave.oer4f" "mss\inference.oer4f" "mss\mss_cli.oer4f" "mss\mss_main.oer4f" "mss\utils.oer4f" 
+DEL /F "common\cli.d" "common\cli_mmwave.d" "mss\inference.d" "mss\mss_cli.d" "mss\mss_main.d" "mss\utils.d" 
+C:\Users\sonif\Documents\StudiumMaster\Semester3\Masterthesis\TI_modifiedFromTICommunity\multi_gesture_68xx_mss\Debug\multi_gesture_68xx_mss.hex konnte nicht gefunden werden
+C:\Users\sonif\Documents\StudiumMaster\Semester3\Masterthesis\TI_modifiedFromTICommunity\multi_gesture_68xx_mss\Debug\multi_gesture_68xx_mss.xer4f konnte nicht gefunden werden
+'Finished clean'
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project multi_gesture_68xx_mss ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+rm -f C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/Debug/multi_gesture_demo_68xx.bin
+makefile:196: recipe for target 'pre-build' failed
+process_begin: CreateProcess(NULL, rm -f C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/Debug/multi_gesture_demo_68xx.bin, ...) failed.
+make (e=2): Das System kann die angegebene Datei nicht finden.
+
+gmake[1]: [pre-build] Error 2 (ignored)
+ 
+'Building file: "../mss/mss_mmw.cfg"'
+'Invoking: XDCtools'
+"C:/ti/xdctools_3_50_08_24_core/xs" --xdcpath="C:/ti/bios_6_73_01_01/packages;C:/ti/ccsv7/ccs_base;" xdc.tools.configuro -o configPkg -t ti.targets.arm.elf.R4Ft -p ti.platforms.cortexR:IWR68XX:false:200 -r release -c "C:/ti/ti-cgt-arm_16.9.6.LTS" --compileOptions "--enum_type=int " "../mss/mss_mmw.cfg"
+making package.mak (because of package.bld) ...
+generating interfaces for package configPkg (because package/package.xdc.inc is older than package.xdc) ...
+configuring mss_mmw.xer4ft from package/cfg/mss_mmw_per4ft.cfg ...
+generating custom ti.sysbios library makefile ... 
+Starting build of library sources ...
+making C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss/src/sysbios/sysbios.aer4ft ...
+gmake[1]: Entering directory `C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss/src/sysbios'
+gmake[1]: Nothing to be done for `all'.
+gmake[1]: Leaving directory `C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss/src/sysbios'
+Build of libraries done.
+cler4ft package/cfg/mss_mmw_per4ft.c ...
+'Finished building: "../mss/mss_mmw.cfg"'
+ 
+'Building file: "../mss/inference.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7R4 --code_state=16 --float_support=VFPv3D16 -me -O3 --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common/ANN" --include_path="C:/ti/ti-cgt-arm_16.9.6.LTS/include" --define=SOC_XWR68XX --define=SUBSYS_MSS --define=DOWNLOAD_FROM_CCS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=APP_RESOURCE_FILE='<'ti/demo/xwr68xx/mmw/mmw_res.h'>' -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --enum_type=int --abi=eabi --obj_extension=.oer4f --preproc_with_compile --preproc_dependency="mss/inference.d_raw" --obj_directory="mss" --cmd_file="configPkg/compiler.opt" "../mss/inference.c"
+'Finished building: "../mss/inference.c"'
+ 
+'Building file: "../mss/utils.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7R4 --code_state=16 --float_support=VFPv3D16 -me -O3 --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common/ANN" --include_path="C:/ti/ti-cgt-arm_16.9.6.LTS/include" --define=SOC_XWR68XX --define=SUBSYS_MSS --define=DOWNLOAD_FROM_CCS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=APP_RESOURCE_FILE='<'ti/demo/xwr68xx/mmw/mmw_res.h'>' -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --enum_type=int --abi=eabi --obj_extension=.oer4f --preproc_with_compile --preproc_dependency="mss/utils.d_raw" --obj_directory="mss" --cmd_file="configPkg/compiler.opt" "../mss/utils.c"
+'Finished building: "../mss/utils.c"'
+ 
+'Building file: "../common/cli.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7R4 --code_state=16 --float_support=VFPv3D16 -me -O3 --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common/ANN" --include_path="C:/ti/ti-cgt-arm_16.9.6.LTS/include" --define=SOC_XWR68XX --define=SUBSYS_MSS --define=DOWNLOAD_FROM_CCS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=APP_RESOURCE_FILE='<'ti/demo/xwr68xx/mmw/mmw_res.h'>' -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --enum_type=int --abi=eabi --obj_extension=.oer4f --preproc_with_compile --preproc_dependency="common/cli.d_raw" --obj_directory="common" --cmd_file="configPkg/compiler.opt" "../common/cli.c"
+'Finished building: "../common/cli.c"'
+ 
+'Building file: "../common/cli_mmwave.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7R4 --code_state=16 --float_support=VFPv3D16 -me -O3 --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common/ANN" --include_path="C:/ti/ti-cgt-arm_16.9.6.LTS/include" --define=SOC_XWR68XX --define=SUBSYS_MSS --define=DOWNLOAD_FROM_CCS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=APP_RESOURCE_FILE='<'ti/demo/xwr68xx/mmw/mmw_res.h'>' -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --enum_type=int --abi=eabi --obj_extension=.oer4f --preproc_with_compile --preproc_dependency="common/cli_mmwave.d_raw" --obj_directory="common" --cmd_file="configPkg/compiler.opt" "../common/cli_mmwave.c"
+'Finished building: "../common/cli_mmwave.c"'
+ 
+'Building file: "../mss/mss_cli.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7R4 --code_state=16 --float_support=VFPv3D16 -me -O3 --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common/ANN" --include_path="C:/ti/ti-cgt-arm_16.9.6.LTS/include" --define=SOC_XWR68XX --define=SUBSYS_MSS --define=DOWNLOAD_FROM_CCS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=APP_RESOURCE_FILE='<'ti/demo/xwr68xx/mmw/mmw_res.h'>' -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --enum_type=int --abi=eabi --obj_extension=.oer4f --preproc_with_compile --preproc_dependency="mss/mss_cli.d_raw" --obj_directory="mss" --cmd_file="configPkg/compiler.opt" "../mss/mss_cli.c"
+'Finished building: "../mss/mss_cli.c"'
+ 
+'Building file: "../mss/mss_main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7R4 --code_state=16 --float_support=VFPv3D16 -me -O3 --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common/ANN" --include_path="C:/ti/ti-cgt-arm_16.9.6.LTS/include" --define=SOC_XWR68XX --define=SUBSYS_MSS --define=DOWNLOAD_FROM_CCS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=APP_RESOURCE_FILE='<'ti/demo/xwr68xx/mmw/mmw_res.h'>' -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --enum_type=int --abi=eabi --obj_extension=.oer4f --preproc_with_compile --preproc_dependency="mss/mss_main.d_raw" --obj_directory="mss" --cmd_file="configPkg/compiler.opt" "../mss/mss_main.c"
+'Finished building: "../mss/mss_main.c"'
+ 
+'Building target: "multi_gesture_68xx_mss.xer4f"'
+'Invoking: ARM Linker'
+"C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7R4 --code_state=16 --float_support=VFPv3D16 -me -O3 --define=SOC_XWR68XX --define=SUBSYS_MSS --define=DOWNLOAD_FROM_CCS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=APP_RESOURCE_FILE='<'ti/demo/xwr68xx/mmw/mmw_res.h'>' -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --enum_type=int --abi=eabi --obj_extension=.oer4f -z -m"multi_gesture_68xx_mss.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ti-cgt-arm_16.9.6.LTS/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/control/mmwave/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/control/mmwavelink/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/adcbuf/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/crc/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/dma/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/edma/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/esm/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/gpio/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/mailbox/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/osal/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/pinmux/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/soc/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/uart/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/utils/mathutils/lib" -i"C:/ti/ti-cgt-arm_16.9.6.LTS/include" --reread_libs --disable_auto_rts --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --diag_error=10015 --diag_warning=225 --diag_wrap=off --display_error_number --warn_sections --xml_link_info="multi_gesture_68xx_mss_linkInfo.xml" --rom_model --unused_section_elimination=on -o "multi_gesture_68xx_mss.xer4f" "./common/cli.oer4f" "./common/cli_mmwave.oer4f" "./mss/inference.oer4f" "./mss/mss_cli.oer4f" "./mss/mss_main.oer4f" "./mss/utils.oer4f" "../r4f_linker.cmd" "../mss/mss_mmw_linker.cmd" -l"configPkg/linker.cmd" -llibosal_xwr68xx.aer4f -llibesm_xwr68xx.aer4f -llibgpio_xwr68xx.aer4f -llibsoc_xwr68xx.aer4f -llibpinmux_xwr68xx.aer4f -llibcrc_xwr68xx.aer4f -llibuart_xwr68xx.aer4f -llibmailbox_xwr68xx.aer4f -llibmmwavelink_xwr68xx.aer4f -llibmmwave_xwr68xx.aer4f -llibadcbuf_xwr68xx.aer4f -llibdma_xwr68xx.aer4f -llibedma_xwr68xx.aer4f -llibmathutils.aer4f -lrtsv7R4_T_le_v3D16_eabi.lib -llibc.a 
+<Linking>
+'Finished building target: "multi_gesture_68xx_mss.xer4f"'
+ 
+C:/ti/mmwave_sdk_03_01_01_02/packages/scripts/ImageCreator/out2rprc/out2rprc.exe multi_gesture_68xx_mss.xer4f multi_gesture_68xx_mss.tmp
+Parsing the input object file, multi_gesture_68xx_mss.xer4f.
+Appending zeros 0
+Appending zeros 256
+File conversion complete!
+C:/ti/mmwave_sdk_03_01_01_02/packages/scripts/ImageCreator/multicore_image_generator/MulticoreImageGen.exe LE 37 0x02000006 multi_gesture_demo_68xx.bin 0x35510000 multi_gesture_68xx_mss.tmp 0xb5510000 C:/ti/mmwave_sdk_03_01_01_02/firmware/radarss/iwr6xxx_radarss_rprc.bin 0xd5510000 C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_dss/Debug/multi_gesture_68xx_dss.bin
+Number of Input Files 3
+Number of zeros 32
+Number of zeros 48
+Number of zeros 40
+
+C:/ti/mmwave_sdk_03_01_01_02/packages/scripts/ImageCreator/crc_multicore_image/crc_multicore_image.exe multi_gesture_demo_68xx.bin multi_gesture_demo_68xx.tmp
+size of App Image is 495680 bytes
+cur_crc_read_addr 128
+cur_crc_read_addr 102656
+cur_crc_read_addr 320320
+Failed to remove CRC temp file
+
+C:/ti/mmwave_sdk_03_01_01_02/packages/scripts/ImageCreator/append_bin_crc/gen_bincrc32.exe multi_gesture_demo_68xx.bin
+>>>> Binary CRC32 = d0f8ef13 <<<<
+>>>> Total bytes in binary file 495684 <<<<
+
+ 
+
+**** Build Finished ****
+
+**** Clean-only build of configuration Debug for project multi_gesture_68xx_mss ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 8 clean -O 
+ 
+DEL /F  "multi_gesture_68xx_mss.hex"  "configPkg\linker.cmd" "configPkg\compiler.opt"  "multi_gesture_68xx_mss.xer4f" 
+RMDIR /S/Q  "configPkg\" 
+DEL /F "common\cli.oer4f" "common\cli_mmwave.oer4f" "mss\inference.oer4f" "mss\mss_cli.oer4f" "mss\mss_main.oer4f" "mss\utils.oer4f" 
+DEL /F "common\cli.d" "common\cli_mmwave.d" "mss\inference.d" "mss\mss_cli.d" "mss\mss_main.d" "mss\utils.d" 
+C:\Users\sonif\Documents\StudiumMaster\Semester3\Masterthesis\TI_modifiedFromTICommunity\multi_gesture_68xx_mss\Debug\multi_gesture_68xx_mss.hex konnte nicht gefunden werden
+'Finished clean'
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project multi_gesture_68xx_mss ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+rm -f C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/Debug/multi_gesture_demo_68xx.bin
+makefile:196: recipe for target 'pre-build' failed
+process_begin: CreateProcess(NULL, rm -f C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/Debug/multi_gesture_demo_68xx.bin, ...) failed.
+make (e=2): Das System kann die angegebene Datei nicht finden.
+
+gmake[1]: [pre-build] Error 2 (ignored)
+ 
+'Building file: "../mss/mss_mmw.cfg"'
+'Invoking: XDCtools'
+"C:/ti/xdctools_3_50_08_24_core/xs" --xdcpath="C:/ti/bios_6_73_01_01/packages;C:/ti/ccsv7/ccs_base;" xdc.tools.configuro -o configPkg -t ti.targets.arm.elf.R4Ft -p ti.platforms.cortexR:IWR68XX:false:200 -r release -c "C:/ti/ti-cgt-arm_16.9.6.LTS" --compileOptions "--enum_type=int " "../mss/mss_mmw.cfg"
+making package.mak (because of package.bld) ...
+generating interfaces for package configPkg (because package/package.xdc.inc is older than package.xdc) ...
+configuring mss_mmw.xer4ft from package/cfg/mss_mmw_per4ft.cfg ...
+generating custom ti.sysbios library makefile ... 
+Starting build of library sources ...
+making C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss/src/sysbios/sysbios.aer4ft ...
+gmake[1]: Entering directory `C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss/src/sysbios'
+gmake[1]: Nothing to be done for `all'.
+gmake[1]: Leaving directory `C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss/src/sysbios'
+Build of libraries done.
+cler4ft package/cfg/mss_mmw_per4ft.c ...
+'Finished building: "../mss/mss_mmw.cfg"'
+ 
+'Building file: "../mss/inference.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7R4 --code_state=16 --float_support=VFPv3D16 -me -O3 --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common/ANN" --include_path="C:/ti/ti-cgt-arm_16.9.6.LTS/include" --define=SOC_XWR68XX --define=SUBSYS_MSS --define=DOWNLOAD_FROM_CCS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=APP_RESOURCE_FILE='<'ti/demo/xwr68xx/mmw/mmw_res.h'>' -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --enum_type=int --abi=eabi --obj_extension=.oer4f --preproc_with_compile --preproc_dependency="mss/inference.d_raw" --obj_directory="mss" --cmd_file="configPkg/compiler.opt" "../mss/inference.c"
+'Finished building: "../mss/inference.c"'
+ 
+'Building file: "../mss/utils.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7R4 --code_state=16 --float_support=VFPv3D16 -me -O3 --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common/ANN" --include_path="C:/ti/ti-cgt-arm_16.9.6.LTS/include" --define=SOC_XWR68XX --define=SUBSYS_MSS --define=DOWNLOAD_FROM_CCS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=APP_RESOURCE_FILE='<'ti/demo/xwr68xx/mmw/mmw_res.h'>' -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --enum_type=int --abi=eabi --obj_extension=.oer4f --preproc_with_compile --preproc_dependency="mss/utils.d_raw" --obj_directory="mss" --cmd_file="configPkg/compiler.opt" "../mss/utils.c"
+'Finished building: "../mss/utils.c"'
+ 
+'Building file: "../common/cli.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7R4 --code_state=16 --float_support=VFPv3D16 -me -O3 --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common/ANN" --include_path="C:/ti/ti-cgt-arm_16.9.6.LTS/include" --define=SOC_XWR68XX --define=SUBSYS_MSS --define=DOWNLOAD_FROM_CCS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=APP_RESOURCE_FILE='<'ti/demo/xwr68xx/mmw/mmw_res.h'>' -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --enum_type=int --abi=eabi --obj_extension=.oer4f --preproc_with_compile --preproc_dependency="common/cli.d_raw" --obj_directory="common" --cmd_file="configPkg/compiler.opt" "../common/cli.c"
+'Finished building: "../common/cli.c"'
+ 
+'Building file: "../common/cli_mmwave.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7R4 --code_state=16 --float_support=VFPv3D16 -me -O3 --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common/ANN" --include_path="C:/ti/ti-cgt-arm_16.9.6.LTS/include" --define=SOC_XWR68XX --define=SUBSYS_MSS --define=DOWNLOAD_FROM_CCS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=APP_RESOURCE_FILE='<'ti/demo/xwr68xx/mmw/mmw_res.h'>' -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --enum_type=int --abi=eabi --obj_extension=.oer4f --preproc_with_compile --preproc_dependency="common/cli_mmwave.d_raw" --obj_directory="common" --cmd_file="configPkg/compiler.opt" "../common/cli_mmwave.c"
+'Finished building: "../common/cli_mmwave.c"'
+ 
+'Building file: "../mss/mss_cli.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7R4 --code_state=16 --float_support=VFPv3D16 -me -O3 --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common/ANN" --include_path="C:/ti/ti-cgt-arm_16.9.6.LTS/include" --define=SOC_XWR68XX --define=SUBSYS_MSS --define=DOWNLOAD_FROM_CCS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=APP_RESOURCE_FILE='<'ti/demo/xwr68xx/mmw/mmw_res.h'>' -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --enum_type=int --abi=eabi --obj_extension=.oer4f --preproc_with_compile --preproc_dependency="mss/mss_cli.d_raw" --obj_directory="mss" --cmd_file="configPkg/compiler.opt" "../mss/mss_cli.c"
+'Finished building: "../mss/mss_cli.c"'
+ 
+'Building file: "../mss/mss_main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7R4 --code_state=16 --float_support=VFPv3D16 -me -O3 --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common/ANN" --include_path="C:/ti/ti-cgt-arm_16.9.6.LTS/include" --define=SOC_XWR68XX --define=SUBSYS_MSS --define=DOWNLOAD_FROM_CCS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=APP_RESOURCE_FILE='<'ti/demo/xwr68xx/mmw/mmw_res.h'>' -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --enum_type=int --abi=eabi --obj_extension=.oer4f --preproc_with_compile --preproc_dependency="mss/mss_main.d_raw" --obj_directory="mss" --cmd_file="configPkg/compiler.opt" "../mss/mss_main.c"
+'Finished building: "../mss/mss_main.c"'
+ 
+'Building target: "multi_gesture_68xx_mss.xer4f"'
+'Invoking: ARM Linker'
+"C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7R4 --code_state=16 --float_support=VFPv3D16 -me -O3 --define=SOC_XWR68XX --define=SUBSYS_MSS --define=DOWNLOAD_FROM_CCS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=APP_RESOURCE_FILE='<'ti/demo/xwr68xx/mmw/mmw_res.h'>' -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --enum_type=int --abi=eabi --obj_extension=.oer4f -z -m"multi_gesture_68xx_mss.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ti-cgt-arm_16.9.6.LTS/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/control/mmwave/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/control/mmwavelink/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/adcbuf/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/crc/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/dma/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/edma/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/esm/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/gpio/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/mailbox/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/osal/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/pinmux/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/soc/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/uart/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/utils/mathutils/lib" -i"C:/ti/ti-cgt-arm_16.9.6.LTS/include" --reread_libs --disable_auto_rts --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --diag_error=10015 --diag_warning=225 --diag_wrap=off --display_error_number --warn_sections --xml_link_info="multi_gesture_68xx_mss_linkInfo.xml" --rom_model --unused_section_elimination=on -o "multi_gesture_68xx_mss.xer4f" "./common/cli.oer4f" "./common/cli_mmwave.oer4f" "./mss/inference.oer4f" "./mss/mss_cli.oer4f" "./mss/mss_main.oer4f" "./mss/utils.oer4f" "../r4f_linker.cmd" "../mss/mss_mmw_linker.cmd" -l"configPkg/linker.cmd" -llibosal_xwr68xx.aer4f -llibesm_xwr68xx.aer4f -llibgpio_xwr68xx.aer4f -llibsoc_xwr68xx.aer4f -llibpinmux_xwr68xx.aer4f -llibcrc_xwr68xx.aer4f -llibuart_xwr68xx.aer4f -llibmailbox_xwr68xx.aer4f -llibmmwavelink_xwr68xx.aer4f -llibmmwave_xwr68xx.aer4f -llibadcbuf_xwr68xx.aer4f -llibdma_xwr68xx.aer4f -llibedma_xwr68xx.aer4f -llibmathutils.aer4f -lrtsv7R4_T_le_v3D16_eabi.lib -llibc.a 
+<Linking>
+'Finished building target: "multi_gesture_68xx_mss.xer4f"'
+ 
+C:/ti/mmwave_sdk_03_01_01_02/packages/scripts/ImageCreator/out2rprc/out2rprc.exe multi_gesture_68xx_mss.xer4f multi_gesture_68xx_mss.tmp
+Parsing the input object file, multi_gesture_68xx_mss.xer4f.
+Appending zeros 0
+Appending zeros 256
+File conversion complete!
+C:/ti/mmwave_sdk_03_01_01_02/packages/scripts/ImageCreator/multicore_image_generator/MulticoreImageGen.exe LE 37 0x02000006 multi_gesture_demo_68xx.bin 0x35510000 multi_gesture_68xx_mss.tmp 0xb5510000 C:/ti/mmwave_sdk_03_01_01_02/firmware/radarss/iwr6xxx_radarss_rprc.bin 0xd5510000 C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_dss/Debug/multi_gesture_68xx_dss.bin
+Number of Input Files 3
+Number of zeros 32
+Number of zeros 48
+Number of zeros 40
+
+C:/ti/mmwave_sdk_03_01_01_02/packages/scripts/ImageCreator/crc_multicore_image/crc_multicore_image.exe multi_gesture_demo_68xx.bin multi_gesture_demo_68xx.tmp
+size of App Image is 495680 bytes
+cur_crc_read_addr 128
+cur_crc_read_addr 102656
+cur_crc_read_addr 320320
+Failed to remove CRC temp file
+
+C:/ti/mmwave_sdk_03_01_01_02/packages/scripts/ImageCreator/append_bin_crc/gen_bincrc32.exe multi_gesture_demo_68xx.bin
+>>>> Binary CRC32 = 6ef6b6e3 <<<<
+>>>> Total bytes in binary file 495684 <<<<
+
+ 
+
+**** Build Finished ****
+
+**** Clean-only build of configuration Debug for project multi_gesture_68xx_mss ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 8 clean -O 
+ 
+DEL /F  "multi_gesture_68xx_mss.hex"  "configPkg\linker.cmd" "configPkg\compiler.opt"  "multi_gesture_68xx_mss.xer4f" 
+RMDIR /S/Q  "configPkg\" 
+DEL /F "common\cli.oer4f" "common\cli_mmwave.oer4f" "mss\inference.oer4f" "mss\mss_cli.oer4f" "mss\mss_main.oer4f" "mss\utils.oer4f" 
+DEL /F "common\cli.d" "common\cli_mmwave.d" "mss\inference.d" "mss\mss_cli.d" "mss\mss_main.d" "mss\utils.d" 
+C:\Users\sonif\Documents\StudiumMaster\Semester3\Masterthesis\TI_modifiedFromTICommunity\multi_gesture_68xx_mss\Debug\multi_gesture_68xx_mss.hex konnte nicht gefunden werden
+'Finished clean'
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project multi_gesture_68xx_mss ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+rm -f C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/Debug/multi_gesture_demo_68xx.bin
+makefile:196: recipe for target 'pre-build' failed
+process_begin: CreateProcess(NULL, rm -f C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/Debug/multi_gesture_demo_68xx.bin, ...) failed.
+make (e=2): Das System kann die angegebene Datei nicht finden.
+
+gmake[1]: [pre-build] Error 2 (ignored)
+ 
+'Building file: "../mss/mss_mmw.cfg"'
+'Invoking: XDCtools'
+"C:/ti/xdctools_3_50_08_24_core/xs" --xdcpath="C:/ti/bios_6_73_01_01/packages;C:/ti/ccsv7/ccs_base;" xdc.tools.configuro -o configPkg -t ti.targets.arm.elf.R4Ft -p ti.platforms.cortexR:IWR68XX:false:200 -r release -c "C:/ti/ti-cgt-arm_16.9.6.LTS" --compileOptions "--enum_type=int " "../mss/mss_mmw.cfg"
+making package.mak (because of package.bld) ...
+generating interfaces for package configPkg (because package/package.xdc.inc is older than package.xdc) ...
+configuring mss_mmw.xer4ft from package/cfg/mss_mmw_per4ft.cfg ...
+generating custom ti.sysbios library makefile ... 
+Starting build of library sources ...
+making C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss/src/sysbios/sysbios.aer4ft ...
+gmake[1]: Entering directory `C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss/src/sysbios'
+gmake[1]: Nothing to be done for `all'.
+gmake[1]: Leaving directory `C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss/src/sysbios'
+Build of libraries done.
+cler4ft package/cfg/mss_mmw_per4ft.c ...
+'Finished building: "../mss/mss_mmw.cfg"'
+ 
+'Building file: "../mss/inference.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7R4 --code_state=16 --float_support=VFPv3D16 -me -O3 --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common/ANN" --include_path="C:/ti/ti-cgt-arm_16.9.6.LTS/include" --define=SOC_XWR68XX --define=SUBSYS_MSS --define=DOWNLOAD_FROM_CCS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=APP_RESOURCE_FILE='<'ti/demo/xwr68xx/mmw/mmw_res.h'>' -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --enum_type=int --abi=eabi --obj_extension=.oer4f --preproc_with_compile --preproc_dependency="mss/inference.d_raw" --obj_directory="mss" --cmd_file="configPkg/compiler.opt" "../mss/inference.c"
+'Finished building: "../mss/inference.c"'
+ 
+'Building file: "../mss/utils.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7R4 --code_state=16 --float_support=VFPv3D16 -me -O3 --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common/ANN" --include_path="C:/ti/ti-cgt-arm_16.9.6.LTS/include" --define=SOC_XWR68XX --define=SUBSYS_MSS --define=DOWNLOAD_FROM_CCS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=APP_RESOURCE_FILE='<'ti/demo/xwr68xx/mmw/mmw_res.h'>' -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --enum_type=int --abi=eabi --obj_extension=.oer4f --preproc_with_compile --preproc_dependency="mss/utils.d_raw" --obj_directory="mss" --cmd_file="configPkg/compiler.opt" "../mss/utils.c"
+'Finished building: "../mss/utils.c"'
+ 
+'Building file: "../common/cli.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7R4 --code_state=16 --float_support=VFPv3D16 -me -O3 --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common/ANN" --include_path="C:/ti/ti-cgt-arm_16.9.6.LTS/include" --define=SOC_XWR68XX --define=SUBSYS_MSS --define=DOWNLOAD_FROM_CCS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=APP_RESOURCE_FILE='<'ti/demo/xwr68xx/mmw/mmw_res.h'>' -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --enum_type=int --abi=eabi --obj_extension=.oer4f --preproc_with_compile --preproc_dependency="common/cli.d_raw" --obj_directory="common" --cmd_file="configPkg/compiler.opt" "../common/cli.c"
+'Finished building: "../common/cli.c"'
+ 
+'Building file: "../common/cli_mmwave.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7R4 --code_state=16 --float_support=VFPv3D16 -me -O3 --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common/ANN" --include_path="C:/ti/ti-cgt-arm_16.9.6.LTS/include" --define=SOC_XWR68XX --define=SUBSYS_MSS --define=DOWNLOAD_FROM_CCS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=APP_RESOURCE_FILE='<'ti/demo/xwr68xx/mmw/mmw_res.h'>' -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --enum_type=int --abi=eabi --obj_extension=.oer4f --preproc_with_compile --preproc_dependency="common/cli_mmwave.d_raw" --obj_directory="common" --cmd_file="configPkg/compiler.opt" "../common/cli_mmwave.c"
+'Finished building: "../common/cli_mmwave.c"'
+ 
+'Building file: "../mss/mss_cli.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7R4 --code_state=16 --float_support=VFPv3D16 -me -O3 --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common/ANN" --include_path="C:/ti/ti-cgt-arm_16.9.6.LTS/include" --define=SOC_XWR68XX --define=SUBSYS_MSS --define=DOWNLOAD_FROM_CCS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=APP_RESOURCE_FILE='<'ti/demo/xwr68xx/mmw/mmw_res.h'>' -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --enum_type=int --abi=eabi --obj_extension=.oer4f --preproc_with_compile --preproc_dependency="mss/mss_cli.d_raw" --obj_directory="mss" --cmd_file="configPkg/compiler.opt" "../mss/mss_cli.c"
+'Finished building: "../mss/mss_cli.c"'
+ 
+'Building file: "../mss/mss_main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7R4 --code_state=16 --float_support=VFPv3D16 -me -O3 --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common/ANN" --include_path="C:/ti/ti-cgt-arm_16.9.6.LTS/include" --define=SOC_XWR68XX --define=SUBSYS_MSS --define=DOWNLOAD_FROM_CCS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=APP_RESOURCE_FILE='<'ti/demo/xwr68xx/mmw/mmw_res.h'>' -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --enum_type=int --abi=eabi --obj_extension=.oer4f --preproc_with_compile --preproc_dependency="mss/mss_main.d_raw" --obj_directory="mss" --cmd_file="configPkg/compiler.opt" "../mss/mss_main.c"
+'Finished building: "../mss/mss_main.c"'
+ 
+'Building target: "multi_gesture_68xx_mss.xer4f"'
+'Invoking: ARM Linker'
+"C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7R4 --code_state=16 --float_support=VFPv3D16 -me -O3 --define=SOC_XWR68XX --define=SUBSYS_MSS --define=DOWNLOAD_FROM_CCS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=APP_RESOURCE_FILE='<'ti/demo/xwr68xx/mmw/mmw_res.h'>' -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --enum_type=int --abi=eabi --obj_extension=.oer4f -z -m"multi_gesture_68xx_mss.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ti-cgt-arm_16.9.6.LTS/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/control/mmwave/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/control/mmwavelink/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/adcbuf/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/crc/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/dma/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/edma/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/esm/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/gpio/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/mailbox/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/osal/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/pinmux/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/soc/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/uart/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/utils/mathutils/lib" -i"C:/ti/ti-cgt-arm_16.9.6.LTS/include" --reread_libs --disable_auto_rts --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --diag_error=10015 --diag_warning=225 --diag_wrap=off --display_error_number --warn_sections --xml_link_info="multi_gesture_68xx_mss_linkInfo.xml" --rom_model --unused_section_elimination=on -o "multi_gesture_68xx_mss.xer4f" "./common/cli.oer4f" "./common/cli_mmwave.oer4f" "./mss/inference.oer4f" "./mss/mss_cli.oer4f" "./mss/mss_main.oer4f" "./mss/utils.oer4f" "../r4f_linker.cmd" "../mss/mss_mmw_linker.cmd" -l"configPkg/linker.cmd" -llibosal_xwr68xx.aer4f -llibesm_xwr68xx.aer4f -llibgpio_xwr68xx.aer4f -llibsoc_xwr68xx.aer4f -llibpinmux_xwr68xx.aer4f -llibcrc_xwr68xx.aer4f -llibuart_xwr68xx.aer4f -llibmailbox_xwr68xx.aer4f -llibmmwavelink_xwr68xx.aer4f -llibmmwave_xwr68xx.aer4f -llibadcbuf_xwr68xx.aer4f -llibdma_xwr68xx.aer4f -llibedma_xwr68xx.aer4f -llibmathutils.aer4f -lrtsv7R4_T_le_v3D16_eabi.lib -llibc.a 
+<Linking>
+'Finished building target: "multi_gesture_68xx_mss.xer4f"'
+ 
+C:/ti/mmwave_sdk_03_01_01_02/packages/scripts/ImageCreator/out2rprc/out2rprc.exe multi_gesture_68xx_mss.xer4f multi_gesture_68xx_mss.tmp
+Parsing the input object file, multi_gesture_68xx_mss.xer4f.
+Appending zeros 0
+Appending zeros 256
+File conversion complete!
+C:/ti/mmwave_sdk_03_01_01_02/packages/scripts/ImageCreator/multicore_image_generator/MulticoreImageGen.exe LE 37 0x02000006 multi_gesture_demo_68xx.bin 0x35510000 multi_gesture_68xx_mss.tmp 0xb5510000 C:/ti/mmwave_sdk_03_01_01_02/firmware/radarss/iwr6xxx_radarss_rprc.bin 0xd5510000 C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_dss/Debug/multi_gesture_68xx_dss.bin
+Number of Input Files 3
+Number of zeros 32
+Number of zeros 48
+Number of zeros 40
+
+C:/ti/mmwave_sdk_03_01_01_02/packages/scripts/ImageCreator/crc_multicore_image/crc_multicore_image.exe multi_gesture_demo_68xx.bin multi_gesture_demo_68xx.tmp
+size of App Image is 495680 bytes
+cur_crc_read_addr 128
+cur_crc_read_addr 102656
+cur_crc_read_addr 320320
+Failed to remove CRC temp file
+
+C:/ti/mmwave_sdk_03_01_01_02/packages/scripts/ImageCreator/append_bin_crc/gen_bincrc32.exe multi_gesture_demo_68xx.bin
+>>>> Binary CRC32 = 9d110145 <<<<
+>>>> Total bytes in binary file 495684 <<<<
+
+ 
+
+**** Build Finished ****
+
+**** Clean-only build of configuration Debug for project multi_gesture_68xx_mss ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 8 clean -O 
+ 
+DEL /F  "multi_gesture_68xx_mss.hex"  "configPkg\linker.cmd" "configPkg\compiler.opt"  "multi_gesture_68xx_mss.xer4f" 
+RMDIR /S/Q  "configPkg\" 
+DEL /F "common\cli.oer4f" "common\cli_mmwave.oer4f" "mss\inference.oer4f" "mss\mss_cli.oer4f" "mss\mss_main.oer4f" "mss\utils.oer4f" 
+DEL /F "common\cli.d" "common\cli_mmwave.d" "mss\inference.d" "mss\mss_cli.d" "mss\mss_main.d" "mss\utils.d" 
+C:\Users\sonif\Documents\StudiumMaster\Semester3\Masterthesis\TI_modifiedFromTICommunity\multi_gesture_68xx_mss\Debug\multi_gesture_68xx_mss.hex konnte nicht gefunden werden
+'Finished clean'
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project multi_gesture_68xx_mss ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+rm -f C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/Debug/multi_gesture_demo_68xx.bin
+makefile:196: recipe for target 'pre-build' failed
+process_begin: CreateProcess(NULL, rm -f C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/Debug/multi_gesture_demo_68xx.bin, ...) failed.
+make (e=2): Das System kann die angegebene Datei nicht finden.
+
+gmake[1]: [pre-build] Error 2 (ignored)
+ 
+'Building file: "../mss/mss_mmw.cfg"'
+'Invoking: XDCtools'
+"C:/ti/xdctools_3_50_08_24_core/xs" --xdcpath="C:/ti/bios_6_73_01_01/packages;C:/ti/ccsv7/ccs_base;" xdc.tools.configuro -o configPkg -t ti.targets.arm.elf.R4Ft -p ti.platforms.cortexR:IWR68XX:false:200 -r release -c "C:/ti/ti-cgt-arm_16.9.6.LTS" --compileOptions "--enum_type=int " "../mss/mss_mmw.cfg"
+making package.mak (because of package.bld) ...
+generating interfaces for package configPkg (because package/package.xdc.inc is older than package.xdc) ...
+configuring mss_mmw.xer4ft from package/cfg/mss_mmw_per4ft.cfg ...
+generating custom ti.sysbios library makefile ... 
+Starting build of library sources ...
+making C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss/src/sysbios/sysbios.aer4ft ...
+gmake[1]: Entering directory `C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss/src/sysbios'
+gmake[1]: Nothing to be done for `all'.
+gmake[1]: Leaving directory `C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss/src/sysbios'
+Build of libraries done.
+cler4ft package/cfg/mss_mmw_per4ft.c ...
+'Finished building: "../mss/mss_mmw.cfg"'
+ 
+'Building file: "../mss/inference.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7R4 --code_state=16 --float_support=VFPv3D16 -me -O3 --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common/ANN" --include_path="C:/ti/ti-cgt-arm_16.9.6.LTS/include" --define=SOC_XWR68XX --define=SUBSYS_MSS --define=DOWNLOAD_FROM_CCS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=APP_RESOURCE_FILE='<'ti/demo/xwr68xx/mmw/mmw_res.h'>' -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --enum_type=int --abi=eabi --obj_extension=.oer4f --preproc_with_compile --preproc_dependency="mss/inference.d_raw" --obj_directory="mss" --cmd_file="configPkg/compiler.opt" "../mss/inference.c"
+'Finished building: "../mss/inference.c"'
+ 
+'Building file: "../mss/utils.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7R4 --code_state=16 --float_support=VFPv3D16 -me -O3 --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common/ANN" --include_path="C:/ti/ti-cgt-arm_16.9.6.LTS/include" --define=SOC_XWR68XX --define=SUBSYS_MSS --define=DOWNLOAD_FROM_CCS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=APP_RESOURCE_FILE='<'ti/demo/xwr68xx/mmw/mmw_res.h'>' -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --enum_type=int --abi=eabi --obj_extension=.oer4f --preproc_with_compile --preproc_dependency="mss/utils.d_raw" --obj_directory="mss" --cmd_file="configPkg/compiler.opt" "../mss/utils.c"
+'Finished building: "../mss/utils.c"'
+ 
+'Building file: "../common/cli.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7R4 --code_state=16 --float_support=VFPv3D16 -me -O3 --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common/ANN" --include_path="C:/ti/ti-cgt-arm_16.9.6.LTS/include" --define=SOC_XWR68XX --define=SUBSYS_MSS --define=DOWNLOAD_FROM_CCS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=APP_RESOURCE_FILE='<'ti/demo/xwr68xx/mmw/mmw_res.h'>' -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --enum_type=int --abi=eabi --obj_extension=.oer4f --preproc_with_compile --preproc_dependency="common/cli.d_raw" --obj_directory="common" --cmd_file="configPkg/compiler.opt" "../common/cli.c"
+'Finished building: "../common/cli.c"'
+ 
+'Building file: "../common/cli_mmwave.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7R4 --code_state=16 --float_support=VFPv3D16 -me -O3 --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common/ANN" --include_path="C:/ti/ti-cgt-arm_16.9.6.LTS/include" --define=SOC_XWR68XX --define=SUBSYS_MSS --define=DOWNLOAD_FROM_CCS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=APP_RESOURCE_FILE='<'ti/demo/xwr68xx/mmw/mmw_res.h'>' -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --enum_type=int --abi=eabi --obj_extension=.oer4f --preproc_with_compile --preproc_dependency="common/cli_mmwave.d_raw" --obj_directory="common" --cmd_file="configPkg/compiler.opt" "../common/cli_mmwave.c"
+'Finished building: "../common/cli_mmwave.c"'
+ 
+'Building file: "../mss/mss_cli.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7R4 --code_state=16 --float_support=VFPv3D16 -me -O3 --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common/ANN" --include_path="C:/ti/ti-cgt-arm_16.9.6.LTS/include" --define=SOC_XWR68XX --define=SUBSYS_MSS --define=DOWNLOAD_FROM_CCS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=APP_RESOURCE_FILE='<'ti/demo/xwr68xx/mmw/mmw_res.h'>' -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --enum_type=int --abi=eabi --obj_extension=.oer4f --preproc_with_compile --preproc_dependency="mss/mss_cli.d_raw" --obj_directory="mss" --cmd_file="configPkg/compiler.opt" "../mss/mss_cli.c"
+'Finished building: "../mss/mss_cli.c"'
+ 
+'Building file: "../mss/mss_main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7R4 --code_state=16 --float_support=VFPv3D16 -me -O3 --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common/ANN" --include_path="C:/ti/ti-cgt-arm_16.9.6.LTS/include" --define=SOC_XWR68XX --define=SUBSYS_MSS --define=DOWNLOAD_FROM_CCS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=APP_RESOURCE_FILE='<'ti/demo/xwr68xx/mmw/mmw_res.h'>' -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --enum_type=int --abi=eabi --obj_extension=.oer4f --preproc_with_compile --preproc_dependency="mss/mss_main.d_raw" --obj_directory="mss" --cmd_file="configPkg/compiler.opt" "../mss/mss_main.c"
+'Finished building: "../mss/mss_main.c"'
+ 
+'Building target: "multi_gesture_68xx_mss.xer4f"'
+'Invoking: ARM Linker'
+"C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7R4 --code_state=16 --float_support=VFPv3D16 -me -O3 --define=SOC_XWR68XX --define=SUBSYS_MSS --define=DOWNLOAD_FROM_CCS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=APP_RESOURCE_FILE='<'ti/demo/xwr68xx/mmw/mmw_res.h'>' -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --enum_type=int --abi=eabi --obj_extension=.oer4f -z -m"multi_gesture_68xx_mss.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ti-cgt-arm_16.9.6.LTS/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/control/mmwave/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/control/mmwavelink/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/adcbuf/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/crc/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/dma/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/edma/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/esm/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/gpio/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/mailbox/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/osal/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/pinmux/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/soc/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/uart/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/utils/mathutils/lib" -i"C:/ti/ti-cgt-arm_16.9.6.LTS/include" --reread_libs --disable_auto_rts --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --diag_error=10015 --diag_warning=225 --diag_wrap=off --display_error_number --warn_sections --xml_link_info="multi_gesture_68xx_mss_linkInfo.xml" --rom_model --unused_section_elimination=on -o "multi_gesture_68xx_mss.xer4f" "./common/cli.oer4f" "./common/cli_mmwave.oer4f" "./mss/inference.oer4f" "./mss/mss_cli.oer4f" "./mss/mss_main.oer4f" "./mss/utils.oer4f" "../r4f_linker.cmd" "../mss/mss_mmw_linker.cmd" -l"configPkg/linker.cmd" -llibosal_xwr68xx.aer4f -llibesm_xwr68xx.aer4f -llibgpio_xwr68xx.aer4f -llibsoc_xwr68xx.aer4f -llibpinmux_xwr68xx.aer4f -llibcrc_xwr68xx.aer4f -llibuart_xwr68xx.aer4f -llibmailbox_xwr68xx.aer4f -llibmmwavelink_xwr68xx.aer4f -llibmmwave_xwr68xx.aer4f -llibadcbuf_xwr68xx.aer4f -llibdma_xwr68xx.aer4f -llibedma_xwr68xx.aer4f -llibmathutils.aer4f -lrtsv7R4_T_le_v3D16_eabi.lib -llibc.a 
+<Linking>
+'Finished building target: "multi_gesture_68xx_mss.xer4f"'
+ 
+C:/ti/mmwave_sdk_03_01_01_02/packages/scripts/ImageCreator/out2rprc/out2rprc.exe multi_gesture_68xx_mss.xer4f multi_gesture_68xx_mss.tmp
+Parsing the input object file, multi_gesture_68xx_mss.xer4f.
+Appending zeros 0
+Appending zeros 256
+File conversion complete!
+C:/ti/mmwave_sdk_03_01_01_02/packages/scripts/ImageCreator/multicore_image_generator/MulticoreImageGen.exe LE 37 0x02000006 multi_gesture_demo_68xx.bin 0x35510000 multi_gesture_68xx_mss.tmp 0xb5510000 C:/ti/mmwave_sdk_03_01_01_02/firmware/radarss/iwr6xxx_radarss_rprc.bin 0xd5510000 C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_dss/Debug/multi_gesture_68xx_dss.bin
+Number of Input Files 3
+Number of zeros 32
+Number of zeros 48
+Number of zeros 40
+
+C:/ti/mmwave_sdk_03_01_01_02/packages/scripts/ImageCreator/crc_multicore_image/crc_multicore_image.exe multi_gesture_demo_68xx.bin multi_gesture_demo_68xx.tmp
+size of App Image is 495680 bytes
+cur_crc_read_addr 128
+cur_crc_read_addr 102656
+cur_crc_read_addr 320320
+Failed to remove CRC temp file
+
+C:/ti/mmwave_sdk_03_01_01_02/packages/scripts/ImageCreator/append_bin_crc/gen_bincrc32.exe multi_gesture_demo_68xx.bin
+>>>> Binary CRC32 = ff3eb65e <<<<
+>>>> Total bytes in binary file 495684 <<<<
+
+ 
+
+**** Build Finished ****
+
+**** Clean-only build of configuration Debug for project multi_gesture_68xx_mss ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 8 clean -O 
+ 
+DEL /F  "multi_gesture_68xx_mss.hex"  "configPkg\linker.cmd" "configPkg\compiler.opt"  "multi_gesture_68xx_mss.xer4f" 
+RMDIR /S/Q  "configPkg\" 
+DEL /F "common\cli.oer4f" "common\cli_mmwave.oer4f" "mss\inference.oer4f" "mss\mss_cli.oer4f" "mss\mss_main.oer4f" "mss\utils.oer4f" 
+DEL /F "common\cli.d" "common\cli_mmwave.d" "mss\inference.d" "mss\mss_cli.d" "mss\mss_main.d" "mss\utils.d" 
+C:\Users\sonif\Documents\StudiumMaster\Semester3\Masterthesis\TI_modifiedFromTICommunity\multi_gesture_68xx_mss\Debug\multi_gesture_68xx_mss.hex konnte nicht gefunden werden
+'Finished clean'
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project multi_gesture_68xx_mss ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+rm -f C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/Debug/multi_gesture_demo_68xx.bin
+makefile:196: recipe for target 'pre-build' failed
+process_begin: CreateProcess(NULL, rm -f C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/Debug/multi_gesture_demo_68xx.bin, ...) failed.
+make (e=2): Das System kann die angegebene Datei nicht finden.
+
+gmake[1]: [pre-build] Error 2 (ignored)
+ 
+'Building file: "../mss/mss_mmw.cfg"'
+'Invoking: XDCtools'
+"C:/ti/xdctools_3_50_08_24_core/xs" --xdcpath="C:/ti/bios_6_73_01_01/packages;C:/ti/ccsv7/ccs_base;" xdc.tools.configuro -o configPkg -t ti.targets.arm.elf.R4Ft -p ti.platforms.cortexR:IWR68XX:false:200 -r release -c "C:/ti/ti-cgt-arm_16.9.6.LTS" --compileOptions "--enum_type=int " "../mss/mss_mmw.cfg"
+making package.mak (because of package.bld) ...
+generating interfaces for package configPkg (because package/package.xdc.inc is older than package.xdc) ...
+configuring mss_mmw.xer4ft from package/cfg/mss_mmw_per4ft.cfg ...
+generating custom ti.sysbios library makefile ... 
+Starting build of library sources ...
+making C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss/src/sysbios/sysbios.aer4ft ...
+gmake[1]: Entering directory `C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss/src/sysbios'
+gmake[1]: Nothing to be done for `all'.
+gmake[1]: Leaving directory `C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss/src/sysbios'
+Build of libraries done.
+cler4ft package/cfg/mss_mmw_per4ft.c ...
+'Finished building: "../mss/mss_mmw.cfg"'
+ 
+'Building file: "../mss/inference.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7R4 --code_state=16 --float_support=VFPv3D16 -me -O3 --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common/ANN" --include_path="C:/ti/ti-cgt-arm_16.9.6.LTS/include" --define=SOC_XWR68XX --define=SUBSYS_MSS --define=DOWNLOAD_FROM_CCS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=APP_RESOURCE_FILE='<'ti/demo/xwr68xx/mmw/mmw_res.h'>' -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --enum_type=int --abi=eabi --obj_extension=.oer4f --preproc_with_compile --preproc_dependency="mss/inference.d_raw" --obj_directory="mss" --cmd_file="configPkg/compiler.opt" "../mss/inference.c"
+'Finished building: "../mss/inference.c"'
+ 
+'Building file: "../mss/utils.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7R4 --code_state=16 --float_support=VFPv3D16 -me -O3 --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common/ANN" --include_path="C:/ti/ti-cgt-arm_16.9.6.LTS/include" --define=SOC_XWR68XX --define=SUBSYS_MSS --define=DOWNLOAD_FROM_CCS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=APP_RESOURCE_FILE='<'ti/demo/xwr68xx/mmw/mmw_res.h'>' -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --enum_type=int --abi=eabi --obj_extension=.oer4f --preproc_with_compile --preproc_dependency="mss/utils.d_raw" --obj_directory="mss" --cmd_file="configPkg/compiler.opt" "../mss/utils.c"
+'Finished building: "../mss/utils.c"'
+ 
+'Building file: "../common/cli.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7R4 --code_state=16 --float_support=VFPv3D16 -me -O3 --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common/ANN" --include_path="C:/ti/ti-cgt-arm_16.9.6.LTS/include" --define=SOC_XWR68XX --define=SUBSYS_MSS --define=DOWNLOAD_FROM_CCS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=APP_RESOURCE_FILE='<'ti/demo/xwr68xx/mmw/mmw_res.h'>' -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --enum_type=int --abi=eabi --obj_extension=.oer4f --preproc_with_compile --preproc_dependency="common/cli.d_raw" --obj_directory="common" --cmd_file="configPkg/compiler.opt" "../common/cli.c"
+'Finished building: "../common/cli.c"'
+ 
+'Building file: "../common/cli_mmwave.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7R4 --code_state=16 --float_support=VFPv3D16 -me -O3 --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common/ANN" --include_path="C:/ti/ti-cgt-arm_16.9.6.LTS/include" --define=SOC_XWR68XX --define=SUBSYS_MSS --define=DOWNLOAD_FROM_CCS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=APP_RESOURCE_FILE='<'ti/demo/xwr68xx/mmw/mmw_res.h'>' -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --enum_type=int --abi=eabi --obj_extension=.oer4f --preproc_with_compile --preproc_dependency="common/cli_mmwave.d_raw" --obj_directory="common" --cmd_file="configPkg/compiler.opt" "../common/cli_mmwave.c"
+'Finished building: "../common/cli_mmwave.c"'
+ 
+'Building file: "../mss/mss_cli.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7R4 --code_state=16 --float_support=VFPv3D16 -me -O3 --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common/ANN" --include_path="C:/ti/ti-cgt-arm_16.9.6.LTS/include" --define=SOC_XWR68XX --define=SUBSYS_MSS --define=DOWNLOAD_FROM_CCS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=APP_RESOURCE_FILE='<'ti/demo/xwr68xx/mmw/mmw_res.h'>' -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --enum_type=int --abi=eabi --obj_extension=.oer4f --preproc_with_compile --preproc_dependency="mss/mss_cli.d_raw" --obj_directory="mss" --cmd_file="configPkg/compiler.opt" "../mss/mss_cli.c"
+'Finished building: "../mss/mss_cli.c"'
+ 
+'Building file: "../mss/mss_main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7R4 --code_state=16 --float_support=VFPv3D16 -me -O3 --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common/ANN" --include_path="C:/ti/ti-cgt-arm_16.9.6.LTS/include" --define=SOC_XWR68XX --define=SUBSYS_MSS --define=DOWNLOAD_FROM_CCS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=APP_RESOURCE_FILE='<'ti/demo/xwr68xx/mmw/mmw_res.h'>' -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --enum_type=int --abi=eabi --obj_extension=.oer4f --preproc_with_compile --preproc_dependency="mss/mss_main.d_raw" --obj_directory="mss" --cmd_file="configPkg/compiler.opt" "../mss/mss_main.c"
+'Finished building: "../mss/mss_main.c"'
+ 
+'Building target: "multi_gesture_68xx_mss.xer4f"'
+'Invoking: ARM Linker'
+"C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7R4 --code_state=16 --float_support=VFPv3D16 -me -O3 --define=SOC_XWR68XX --define=SUBSYS_MSS --define=DOWNLOAD_FROM_CCS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=APP_RESOURCE_FILE='<'ti/demo/xwr68xx/mmw/mmw_res.h'>' -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --enum_type=int --abi=eabi --obj_extension=.oer4f -z -m"multi_gesture_68xx_mss.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ti-cgt-arm_16.9.6.LTS/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/control/mmwave/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/control/mmwavelink/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/adcbuf/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/crc/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/dma/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/edma/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/esm/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/gpio/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/mailbox/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/osal/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/pinmux/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/soc/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/drivers/uart/lib" -i"C:/ti/mmwave_sdk_03_01_01_02/packages/ti/utils/mathutils/lib" -i"C:/ti/ti-cgt-arm_16.9.6.LTS/include" --reread_libs --disable_auto_rts --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --diag_error=10015 --diag_warning=225 --diag_wrap=off --display_error_number --warn_sections --xml_link_info="multi_gesture_68xx_mss_linkInfo.xml" --rom_model --unused_section_elimination=on -o "multi_gesture_68xx_mss.xer4f" "./common/cli.oer4f" "./common/cli_mmwave.oer4f" "./mss/inference.oer4f" "./mss/mss_cli.oer4f" "./mss/mss_main.oer4f" "./mss/utils.oer4f" "../r4f_linker.cmd" "../mss/mss_mmw_linker.cmd" -l"configPkg/linker.cmd" -llibosal_xwr68xx.aer4f -llibesm_xwr68xx.aer4f -llibgpio_xwr68xx.aer4f -llibsoc_xwr68xx.aer4f -llibpinmux_xwr68xx.aer4f -llibcrc_xwr68xx.aer4f -llibuart_xwr68xx.aer4f -llibmailbox_xwr68xx.aer4f -llibmmwavelink_xwr68xx.aer4f -llibmmwave_xwr68xx.aer4f -llibadcbuf_xwr68xx.aer4f -llibdma_xwr68xx.aer4f -llibedma_xwr68xx.aer4f -llibmathutils.aer4f -lrtsv7R4_T_le_v3D16_eabi.lib -llibc.a 
+<Linking>
+'Finished building target: "multi_gesture_68xx_mss.xer4f"'
+ 
+C:/ti/mmwave_sdk_03_01_01_02/packages/scripts/ImageCreator/out2rprc/out2rprc.exe multi_gesture_68xx_mss.xer4f multi_gesture_68xx_mss.tmp
+Parsing the input object file, multi_gesture_68xx_mss.xer4f.
+Appending zeros 0
+Appending zeros 256
+File conversion complete!
+C:/ti/mmwave_sdk_03_01_01_02/packages/scripts/ImageCreator/multicore_image_generator/MulticoreImageGen.exe LE 37 0x02000006 multi_gesture_demo_68xx.bin 0x35510000 multi_gesture_68xx_mss.tmp 0xb5510000 C:/ti/mmwave_sdk_03_01_01_02/firmware/radarss/iwr6xxx_radarss_rprc.bin 0xd5510000 C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_dss/Debug/multi_gesture_68xx_dss.bin
+Number of Input Files 3
+Number of zeros 32
+Number of zeros 48
+Number of zeros 40
+
+C:/ti/mmwave_sdk_03_01_01_02/packages/scripts/ImageCreator/crc_multicore_image/crc_multicore_image.exe multi_gesture_demo_68xx.bin multi_gesture_demo_68xx.tmp
+size of App Image is 495680 bytes
+cur_crc_read_addr 128
+cur_crc_read_addr 102656
+cur_crc_read_addr 320320
+Failed to remove CRC temp file
+
+C:/ti/mmwave_sdk_03_01_01_02/packages/scripts/ImageCreator/append_bin_crc/gen_bincrc32.exe multi_gesture_demo_68xx.bin
+>>>> Binary CRC32 = 6ef6b6e3 <<<<
+>>>> Total bytes in binary file 495684 <<<<
+
+ 
+
+**** Build Finished ****

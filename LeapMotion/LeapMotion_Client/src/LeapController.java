@@ -275,7 +275,7 @@ public class LeapController {
 		int lmOutputInt = 0;
 		controller.addListener(listener);
 		
-		String hostname = "10.191.0.30";
+		String hostname = "10.191.3.6";
         int port = Integer.parseInt("2016");
         
 		//System.out.println("Press Enter to quit");		

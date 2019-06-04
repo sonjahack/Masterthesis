@@ -184,6 +184,7 @@ class Network_connect extends Thread
 			e1.printStackTrace();
 		}
 	    writer = new PrintWriter(output, true);
+	    writer.println("Radar Sensor connected");
 	    
 		while(true)
 		{
