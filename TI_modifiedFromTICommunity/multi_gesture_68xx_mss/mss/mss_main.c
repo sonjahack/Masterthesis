@@ -771,7 +771,10 @@ static void MmwDemo_mboxReadTask(UArg arg0, UArg arg1)
 				/* Pass the feature vector log to an ANN and post process the output to get an
 				 * estimate of the current gesture. */
 				#ifdef DETECT_2x_GESTURES
-				gestureOut = gestureInferenceProcessing(featureVecPosLog, featureVecNegLog, gestureCnt, gestureCntPrev);
+				//gestureOut = gestureInferenceProcessing(featureVecPosLog, featureVecNegLog, gestureCnt, gestureCntPrev);
+				//modified 2019-06-05
+				// right to left gesture is then left to right; but still only up to down
+				gestureOut = gestureInferenceProcessing(featureVecNegLog, gestureCnt, gestureCntPrev);
 				#else
 				gestureOut = gestureInferenceProcessing(featureVecPosLog, gestureCnt, gestureCntPrev);
 				#endif
@@ -2252,24 +2255,32 @@ void correlation_function(float * ptrAzimDelta, float * ptrElevDelta, float dop[
     for (featureIdx = 0; featureIdx < FEATURE_LENGTH; featureIdx++)
     {
         // sum of elements of array X.
-        sum_dop = sum_dop + fabsf(dop[featureIdx]);
+        sum_dop = sum_dop + dop[featureIdx];
 
         // sum of elements of array Y.
-        sum_azim = sum_azim + fabsf(azim[featureIdx]);
+        sum_azim = sum_azim + azim[featureIdx];
 
         // sum of X[i] * Y[i].
-        sum_dopazim = sum_dopazim + fabsf(dop[featureIdx]) * fabsf(azim[featureIdx]);
+        sum_dopazim = sum_dopazim + dop[featureIdx] * azim[featureIdx];
 
         // sum of square of array elements.
-        squareSum_dop = squareSum_dop + fabsf(dop[featureIdx]) * fabsf(dop[featureIdx]);
-        squareSum_azim = squareSum_azim + fabsf(azim[featureIdx]) * fabsf(azim[featureIdx]);
+        squareSum_dop = squareSum_dop + dop[featureIdx] * dop[featureIdx];
+        squareSum_azim = squareSum_azim + azim[featureIdx] * azim[featureIdx];
     }
 
     // use formula for calculating correlation coefficient.
     float corr = (float)(FEATURE_LENGTH * sum_dopazim - sum_dop * sum_azim)
                   / sqrt((FEATURE_LENGTH * squareSum_dop - sum_dop * sum_dop)
                       * (FEATURE_LENGTH * squareSum_azim - sum_azim * sum_azim));
-    System_printf("%d \n", corr);
+
+    if(corr > 0.7)
+    {
+        printf("Anticlockwise %f\n", corr);
+    }
+    if(corr < -0.7)
+    {
+        printf("Clockwise %f\n", corr);
+    }
 }
 /**
  *  @b Description
