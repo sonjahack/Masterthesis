@@ -54,6 +54,7 @@ cler4ft package/cfg/mss_mmw_per4ft.c ...
 'Building file: "../mss/mss_main.c"'
 'Invoking: ARM Compiler'
 "C:/ti/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7R4 --code_state=16 --float_support=VFPv3D16 -me -O3 --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss" --include_path="C:/ti/mmwave_sdk_03_01_01_02/packages" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/mss" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common" --include_path="C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_mss/common/ANN" --include_path="C:/ti/ti-cgt-arm_16.9.6.LTS/include" --define=SOC_XWR68XX --define=SUBSYS_MSS --define=DOWNLOAD_FROM_CCS --define=MMWAVE_L3RAM_NUM_BANK=6 --define=MMWAVE_SHMEM_TCMA_NUM_BANK=0 --define=MMWAVE_SHMEM_TCMB_NUM_BANK=0 --define=MMWAVE_SHMEM_BANK_SIZE=0x20000 --define=DebugP_ASSERT_ENABLED --define=_LITTLE_ENDIAN --define=APP_RESOURCE_FILE='<'ti/demo/xwr68xx/mmw/mmw_res.h'>' -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --enum_type=int --abi=eabi --obj_extension=.oer4f --preproc_with_compile --preproc_dependency="mss/mss_main.d_raw" --obj_directory="mss" --cmd_file="configPkg/compiler.opt" "../mss/mss_main.c"
+"../mss/mss_main.c", line 2385: warning #552-D: variable "out" was set but never used
 'Finished building: "../mss/mss_main.c"'
  
 'Building target: "multi_gesture_68xx_mss.xer4f"'
@@ -69,19 +70,20 @@ Appending zeros 256
 File conversion complete!
 C:/ti/mmwave_sdk_03_01_01_02/packages/scripts/ImageCreator/multicore_image_generator/MulticoreImageGen.exe LE 37 0x02000006 multi_gesture_demo_68xx.bin 0x35510000 multi_gesture_68xx_mss.tmp 0xb5510000 C:/ti/mmwave_sdk_03_01_01_02/firmware/radarss/iwr6xxx_radarss_rprc.bin 0xd5510000 C:/Users/sonif/Documents/StudiumMaster/Semester3/Masterthesis/TI_modifiedFromTICommunity/multi_gesture_68xx_dss/Debug/multi_gesture_68xx_dss.bin
 Number of Input Files 3
+Number of zeros 40
 Number of zeros 48
 Number of zeros 40
 
 C:/ti/mmwave_sdk_03_01_01_02/packages/scripts/ImageCreator/crc_multicore_image/crc_multicore_image.exe multi_gesture_demo_68xx.bin multi_gesture_demo_68xx.tmp
-size of App Image is 496192 bytes
+size of App Image is 496704 bytes
 cur_crc_read_addr 128
-cur_crc_read_addr 103168
-cur_crc_read_addr 320832
+cur_crc_read_addr 103680
+cur_crc_read_addr 321344
 Failed to remove CRC temp file
 
 C:/ti/mmwave_sdk_03_01_01_02/packages/scripts/ImageCreator/append_bin_crc/gen_bincrc32.exe multi_gesture_demo_68xx.bin
->>>> Binary CRC32 = cd099dca <<<<
->>>> Total bytes in binary file 496196 <<<<
+>>>> Binary CRC32 = 4516d5a6 <<<<
+>>>> Total bytes in binary file 496708 <<<<
 
  
 

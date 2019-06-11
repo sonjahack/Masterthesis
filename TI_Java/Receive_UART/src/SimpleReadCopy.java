@@ -113,7 +113,9 @@ public class SimpleReadCopy implements Runnable, SerialPortEventListener
 	                {
 	                    int numBytes = inputStream.read(readBuffer);
 	                }
-	                System.out.println(new String(readBuffer));
+	                
+	                //System.out.println(new String(readBuffer));
+	                
 	                sensor_Data = new String(readBuffer);
 	                //sensor_output = "";
 	                //sensor_output += sensor_Data.charAt(0);
@@ -166,10 +168,13 @@ class Network_connect extends Thread
 	    int port = Integer.parseInt("2016");
 	    String r = "R";
 	    String u = "U";
+	    String c = "C";
+	    String l = "L";
 	    String sensor_output_cut = null;
 	    
 	    try {
 			socket = new Socket(hostname, port);
+			System.out.println("Connected to Server");
 		} catch (UnknownHostException e2) {
 			// TODO Auto-generated catch block
 			e2.printStackTrace();
@@ -204,24 +209,24 @@ class Network_connect extends Thread
 				sensor_output_cut = "";
 			}
 			//System.out.println("check " + sensor_output_cut + ".");
-			if(sensor_output_cut.contentEquals(r))
+			if(sensor_output_cut.contentEquals(c))
 			{
 				//System.out.println("check");
-				writer.println("enable; set:target 10;");
+				writer.println("enable; set:target 1;");
 				//writer.println(sensor_output_cut);
 				sensor_output_cut = null;
 				si.resetSensorData();
 			}
-			else if(sensor_output_cut.contentEquals(u))
+			else if(sensor_output_cut.contentEquals(l))
 			{
-				writer.println("enable; set:target -10;");
+				writer.println("enable; set:target -1;");
 				//writer.println(sensor_output_cut);
 				sensor_output_cut = null;
 				si.resetSensorData();
 			}
 			else
 			{
-				System.out.println("No Gesture");
+				//System.out.println("No Gesture");
 				sensor_output_cut = null;
 			}
 			try

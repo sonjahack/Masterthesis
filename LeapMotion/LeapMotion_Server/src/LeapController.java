@@ -276,9 +276,9 @@ public class LeapController {
 		controller.addListener(listener);
 		
 		//System.out.println("Press Enter to quit");		
-		try (ServerSocket serverSocket = new ServerSocket(8080))
+		try (ServerSocket serverSocket = new ServerSocket(2016))
 		{
-			System.out.println("Server is listening on Port 8080");
+			System.out.println("Server is listening on Port 2016");
 			
 			//System.in.read();
 			while(true)

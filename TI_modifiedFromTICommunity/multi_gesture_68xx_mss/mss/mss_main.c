@@ -371,6 +371,11 @@ int32_t gestureTimeStamp[2] = { 0 };
 #else
 #define NUM_OUTPUTS (NUM_NODES_THIRD_LAYER - 1)
 #endif
+//modified 2019-06-07
+float circleData[10] = {0};
+float circleDataNew[10]= {0};
+int circleDataInt[10] = {0};
+int circleCount = 0;
 
 int32_t gestureCnt[NUM_OUTPUTS] = { 0 };
 int32_t gestureCntPrev[NUM_OUTPUTS] = { 0 };
@@ -416,9 +421,11 @@ void angleDelta(float * ptrAzimDelta, float * ptrElevDelta, float dop[], float a
 float findDelta(float arr[], int32_t maxIdx, int32_t negate);
 
 //modified 2019-06-04
-void correlation_function(float * ptrAzimDelta, float * ptrElevDelta, float dop[], float azim[], float elev[]);
+float correlation_function(float * ptrAzimDelta, float * ptrElevDelta, float dop[], float azim[], float elev[]);
+float gestureInferenceCircle(float * featureVecLog, int32_t gestureCnt[], int32_t gestureCntPrev[]);
 
-
+//modified 2019-06-07
+void estimateCircleState();
 
 /* global flag to signal transfer of ANN output through UART to external world*/
 volatile int8_t send_ANN_OP_to_UART = 0; // when set to 1, the ANN output will be sent to UART
@@ -696,6 +703,7 @@ static void MmwDemo_mboxReadTask(UArg arg0, UArg arg1)
 	int32_t              retVal = 0;
 	float * ptrFeatures;
 	float gestureOut;
+	float gestureCircle;
 
 
 	/* wait for new message and process all the messages received from the peer */
@@ -778,6 +786,43 @@ static void MmwDemo_mboxReadTask(UArg arg0, UArg arg1)
 				#else
 				gestureOut = gestureInferenceProcessing(featureVecPosLog, gestureCnt, gestureCntPrev);
 				#endif
+
+				//modified 2019-06-06
+				// calculate correlation for features weighted azimuth and
+				// weighted doppler of feature vector
+				// getting float (correlation coefficient) returned
+				gestureCircle = gestureInferenceCircle(featureVecPosLog, gestureCnt, gestureCntPrev);
+
+				//printf("%.4f\n", gestureCircle);
+
+				if(circleCount <= 9)
+				{
+				    circleData[circleCount] = gestureCircle;
+                    printf("%d Correlation: %.4f\n", circleCount, gestureCircle);
+                    circleCount += 1;
+				    //estimateCircleState();
+				}
+				//modified 2019-06-11
+				else
+				{
+				    int k;
+				    for(k = 0; k < (sizeof(circleDataNew)/sizeof(circleDataNew[0]))-1; k++)
+				    {
+				        circleDataNew[k] = circleData[k+1];
+				        printf("%d.tes Element %.4f\n", k, circleDataNew[k]);
+				    }
+				    circleDataNew[circleCount-1] = gestureCircle;
+				    printf("%d.tes (-1) Element %.4f\n", circleCount, circleDataNew[circleCount-1]);
+
+				    estimateCircleState();
+
+				    int h;
+				    for(h = 0; h < (sizeof(circleDataNew)/sizeof(circleDataNew[0])); h++)
+				    {
+				        circleData[h] = circleDataNew[h];
+				        //printf(" Copied: %d.tes Element %.4f\n", h, circleData[h]);
+				    }
+				}
 
 				/* People detection. */
 				/* 1. Maintain a copy of the previous state so as to
@@ -2244,8 +2289,70 @@ void angleDelta(float * ptrAzimDelta, float * ptrElevDelta, float dop[], float a
 
 }
 
+/**
+ *  @b Description
+ *  @n
+ *     A function to compute the closest two 'inflection points' around a given
+ *      and then compute the distance (in indices) between them.
+ *
+ *  @retval
+ *      Not Applicable.
+ */
+float findDelta(float arr[], int32_t maxIdx, int32_t negate)
+{
+    float dLeft;
+    int currIdx;
+    float sumLeft = 0.0f;
+    for (currIdx = maxIdx; currIdx > 0; currIdx--)
+    {
+        dLeft = arr[currIdx - 1] - arr[currIdx];
+        if (negate)
+        {
+            dLeft = -dLeft;
+        }
+
+        if (dLeft > 0)
+        {
+            break;
+        }
+        sumLeft += dLeft;
+
+    }
+
+    float dRight;
+    float sumRight = 0.0f;
+    for (currIdx = maxIdx; currIdx < FEATURE_LENGTH - 1; currIdx++)
+    {
+        dRight = arr[currIdx + 1] - arr[currIdx];
+        if (negate)
+        {
+            dRight = -dRight;
+        }
+
+        if (dRight < 0)
+        {
+            break;
+        }
+        sumRight += dRight;
+
+    }
+
+    return (sumLeft - sumRight);
+}
+
+/**
+ *  @b Description
+ *  @n
+ *     A function to estimate if a circle gesture is executed by generating the
+ *     doppler-azimuth correlation vector between weighted azimuth and
+ *     weighted doppler
+ *
+ *  @retval
+ *      Not Applicable.
+ */
+
 //modified 2019-06-04
-void correlation_function(float * ptrAzimDelta, float * ptrElevDelta, float dop[], float azim[], float elev[])
+float correlation_function(float * ptrAzimDelta, float * ptrElevDelta, float dop[], float azim[], float elev[])
 {
     //https://www.geeksforgeeks.org/program-find-correlation-coefficient/
     int featureIdx;
@@ -2273,67 +2380,109 @@ void correlation_function(float * ptrAzimDelta, float * ptrElevDelta, float dop[
                   / sqrt((FEATURE_LENGTH * squareSum_dop - sum_dop * sum_dop)
                       * (FEATURE_LENGTH * squareSum_azim - sum_azim * sum_azim));
 
-    if(corr > 0.7)
+    //printf("%.4f\n", corr);
+
+    char out =' ';
+    if(corr >= 0.8 && corr <= 1)
     {
-        printf("Anticlockwise %f\n", corr);
+        //printf("Anticlockwise %f\n", corr);
+
+        out = 'L';
+        //UART_writePolling(gMmwMssMCB.loggingUartHandle,
+        //                  (uint8_t*) (&out),
+        //                  sizeof(char) );
     }
-    if(corr < -0.7)
+    else if(corr <= -0.8 && corr >= -1)
     {
-        printf("Clockwise %f\n", corr);
+        //printf("Clockwise %f\n", corr);
+
+        out = 'C';
+        //UART_writePolling(gMmwMssMCB.loggingUartHandle,
+        //                  (uint8_t*) (&out),
+        //                  sizeof(char) );
     }
+    else
+    {
+        out = '0';
+    }
+    return corr;
 }
-/**
- *  @b Description
- *  @n
- *     A function to compute the closest two 'inflection points' around a given
- *      and then compute the distance (in indices) between them.
- *
- *  @retval
- *      Not Applicable.
- */
-float findDelta(float arr[], int32_t maxIdx, int32_t negate)
+
+//modified 2019-06-07
+void estimateCircleState()
 {
-	float dLeft;
-	int currIdx;
-	float sumLeft = 0.0f;
-	for (currIdx = maxIdx; currIdx > 0; currIdx--)
-	{
-		dLeft = arr[currIdx - 1] - arr[currIdx];
-		if (negate)
-		{
-			dLeft = -dLeft;
-		}
+    char out;
+    int h;
+    for(h = 0; h < (sizeof(circleDataNew)/sizeof(circleDataNew[0])); h++)
+    {
+        if(circleDataNew[h] > 0.8 && circleDataNew[h] <= 1)
+        {
+            circleDataInt[h] = 1;
+        }
+        else if(circleDataNew[h] < -0.8 && circleDataNew[h] >= -1)
+        {
+            circleDataInt[h] = -1;
+        }
+        else
+        {
+            circleDataInt[h] = 0;
+        }
+    }
 
-		if (dLeft > 0)
-		{
-			break;
-		}
-		sumLeft += dLeft;
+    int i, sum = 0;
+    for (i = 0; i < (sizeof(circleDataInt)/sizeof(circleDataInt[0])); i++)
+    {
+      sum = sum + circleDataInt[i];
+    }
+    printf("Sum: %d\n", sum);
 
-	}
+    if(sum == 10)
+    {
+        printf("Anticlockwise\n");
+        out = 'L';
+        UART_writePolling(gMmwMssMCB.loggingUartHandle,
+                                  (uint8_t*) (&out),
+                                  sizeof(char) );
 
-	float dRight;
-	float sumRight = 0.0f;
-	for (currIdx = maxIdx; currIdx < FEATURE_LENGTH - 1; currIdx++)
-	{
-		dRight = arr[currIdx + 1] - arr[currIdx];
-		if (negate)
-		{
-			dRight = -dRight;
-		}
 
-		if (dRight < 0)
-		{
-			break;
-		}
-		sumRight += dRight;
+        for(h = 0; h < (sizeof(circleData)/sizeof(circleData[0])); h++)
+        {
+            circleData[h] = 0;
+            circleDataNew[h] = 0;
+            circleDataInt[h] = 0;
+        }
+    }
+    else if(sum == -10)
+    {
+        printf("Clockwise\n");
+        out = 'C';
+        UART_writePolling(gMmwMssMCB.loggingUartHandle,
+                                  (uint8_t*) (&out),
+                                  sizeof(char) );
 
-	}
 
-	return (sumLeft - sumRight);
+        for(h = 0; h < (sizeof(circleData)/sizeof(circleData[0])); h++)
+        {
+            circleData[h] = 0;
+            circleDataNew[h] = 0;
+            circleDataInt[h] = 0;
+        }
+    }
+    else
+    {
+        printf("No Circle Gesture\n");
+    }
+}
+// modified 2019-06-06
+void postProcessCircle(float corr)
+{
+
 }
 
+void printCircleOutput(char output)
+{
 
+}
 /**
  *  @b Description
  *  @n
@@ -2545,13 +2694,6 @@ float gestureInferenceProcessing (float * featureVecLog, int32_t gestureCnt[], i
 
 	maxCheckFlag = maxCheck(&featureVecLog[MSS_FEATURE_IDX_WTDOPPLER*FEATURE_LENGTH]);
 
-	// modified 2019-06-04
-	correlation_function(&featureVecLog[AZIM_DELTA_IDX], // AzimDelta, the first new feature.
-	                     &featureVecLog[ELEV_DELTA_IDX], // ElevDelta, the second new feature.
-	                     &featureVecLog[MSS_FEATURE_IDX_WTDOPPLER*FEATURE_LENGTH], // WtDoppler[]
-	                     &featureVecLog[MSS_FEATURE_IDX_WTAZIM*FEATURE_LENGTH],    // WtAzim[]
-	                     &featureVecLog[MSS_FEATURE_IDX_WTELEV*FEATURE_LENGTH]);
-
 	/* Perform inference. */
 	Inference(&featureVecLog[0], &gANN_struct_t);
 
@@ -2562,7 +2704,17 @@ float gestureInferenceProcessing (float * featureVecLog, int32_t gestureCnt[], i
 	return gestureOut;
 }
 
-
+float gestureInferenceCircle(float * featureVecLog, int32_t gestureCnt[], int32_t gestureCntPrev[])
+{
+    float circleOut;
+    // modified 2019-06-04
+    circleOut = correlation_function(&featureVecLog[AZIM_DELTA_IDX], // AzimDelta, the first new feature.
+                    &featureVecLog[ELEV_DELTA_IDX], // ElevDelta, the second new feature.
+                    &featureVecLog[MSS_FEATURE_IDX_WTDOPPLER*FEATURE_LENGTH], // WtDoppler[]
+                    &featureVecLog[MSS_FEATURE_IDX_WTAZIM*FEATURE_LENGTH],    // WtAzim[]
+                    &featureVecLog[MSS_FEATURE_IDX_WTELEV*FEATURE_LENGTH]);
+    return circleOut;
+}
 
 /**
  *  @b Description

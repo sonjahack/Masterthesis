@@ -2,20 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="correl" key="selection"/>
+		<item value="0.9" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="0.9"/>
 			<item value="correl"/>
-			<item value="2x"/>
-			<item value="modif"/>
-			<item value="gestureInferenceProcessing"/>
-			<item value="corr"/>
-			<item value="core"/>
-			<item value="&apos;R&apos;"/>
-			<item value="uart"/>
+			<item value="estimate"/>
+			<item value=" correlation_function"/>
+			<item value="gestureInferenceCircle"/>
+			<item value="estimateCircleState"/>
+			<item value="circleCount"/>
+			<item value="inferencecircle"/>
 		</list>
 		<list key="replacehistory">
 		</list>
