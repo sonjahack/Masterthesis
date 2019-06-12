@@ -183,27 +183,29 @@ class LeapListener extends Listener
 										+ " Direction: " + clockwiseness);*/
 					
 					progressNew = circle.progress();
-					System.out.println("New:" + progressNew);
-					System.out.println("Old:" + progressOld);
+					//System.out.println("New:" + progressNew);
+					//System.out.println("Old:" + progressOld);
 					
 					progressDelta = progressNew - progressOld; 
-					System.out.println("Delta: " + progressDelta);
+					//System.out.println("Delta: " + progressDelta);
 					progressOld = progressNew;
 					
 					if(progressDelta != 1 || progressDelta != -1)
 					{
 						progressDeltaBuffer += progressDelta;
-						System.out.println("DeltaBuffer: "+ progressDeltaBuffer);
+						//System.out.println("DeltaBuffer: "+ progressDeltaBuffer);
 					}
 					
 					if(progressDeltaBuffer >= 1)
 					{
 						if(clockwiseness == "clockwise")
 						{
+							//System.out.println("DeltaBuffer: "+ progressDeltaBuffer);
 							vol += 1;
 						}
 						else if(clockwiseness == "counter-clockwise")
 						{
+							//System.out.println("DeltaBuffer: "+ progressDeltaBuffer);
 							vol -= 1;
 						}
 						progressDeltaBuffer = 0;
