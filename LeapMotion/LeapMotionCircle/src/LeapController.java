@@ -21,6 +21,9 @@ class LeapListener extends Listener
 {
 	Fenster fenster = new Fenster();
 	private double vol = 0;
+
+	double progressOld = 0;
+	double progressDeltaBuffer = 0;
 	
 	public void onInit(Controller controller)
 	{
@@ -55,6 +58,9 @@ class LeapListener extends Listener
 	{
 		//get Frame from Controller
 		Frame frame = controller.frame();
+		
+		double progressNew;
+		double progressDelta;
 		
 		//float instantaneousFrameRate = frame.currentFramesPerSecond();
 		//System.out.println(instantaneousFrameRate);
@@ -135,8 +141,8 @@ class LeapListener extends Listener
 					{
 						// angle less than 90 degrees
 						clockwiseness = "clockwise";
-						
-						if(vol < 5000)
+						//System.out.println(clockwiseness);
+						/*if(vol < 5000)
 						{
 							vol += 1;
 							//vol += circle.progress();
@@ -144,13 +150,13 @@ class LeapListener extends Listener
 						else
 						{
 							vol = 5000;
-						}
+						}*/
 					}
 					else
 					{
 						clockwiseness = "counter-clockwise";
-						
-						if (vol > 0)
+						//System.out.println(clockwiseness);
+						/*if (vol > 0)
 						{
 							vol -= 1;
 							//vol -= circle.progress();
@@ -158,7 +164,7 @@ class LeapListener extends Listener
 						else
 						{
 							vol = 0;
-						}
+						}*/
 					}
 					
 					double sweptAngle = 0;
@@ -168,14 +174,40 @@ class LeapListener extends Listener
 						CircleGesture previous = new CircleGesture(controller.frame(1).gesture(circle.id()));
 						sweptAngle = (circle.progress() - previous.progress()) * 2 * Math.PI;
 					}
-					/*
-					System.out.println("Circle ID: " + circle.id()
+					
+					/*System.out.println("Circle ID: " + circle.id()
 										+ " State: " + circle.state()
 										+ " Progress: " + circle.progress()  
 										//+ " Radius: " + circle.radius()
 										//+ " Angle: " + Math.toDegrees(sweptAngle)
-										+ " Direction: " + clockwiseness);
-					*/
+										+ " Direction: " + clockwiseness);*/
+					
+					progressNew = circle.progress();
+					System.out.println("New:" + progressNew);
+					System.out.println("Old:" + progressOld);
+					
+					progressDelta = progressNew - progressOld; 
+					System.out.println("Delta: " + progressDelta);
+					progressOld = progressNew;
+					
+					if(progressDelta != 1 || progressDelta != -1)
+					{
+						progressDeltaBuffer += progressDelta;
+						System.out.println("DeltaBuffer: "+ progressDeltaBuffer);
+					}
+					
+					if(progressDeltaBuffer >= 1)
+					{
+						if(clockwiseness == "clockwise")
+						{
+							vol += 1;
+						}
+						else if(clockwiseness == "counter-clockwise")
+						{
+							vol -= 1;
+						}
+						progressDeltaBuffer = 0;
+					}
 					
 					vol = Math.round(vol * 100.0) / 100.0;
 					//System.out.println("Volume: " + vol);
