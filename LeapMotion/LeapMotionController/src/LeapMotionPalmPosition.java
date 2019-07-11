@@ -4,7 +4,10 @@ import java.io.PrintWriter;
 
 import com.leapmotion.leap.*;
 import com.leapmotion.leap.Gesture.State;
+
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -32,6 +35,10 @@ class LeapListener extends Listener
 	int yPalmPositionDeltaInt = 0;
 	
 	double dataOutput = 0;
+	
+	SwipeGesture swipeBuffer;
+	double direction;
+	double directionBuffer = 0;
 	
 	public void onInit(Controller controller)
 	{
@@ -72,6 +79,8 @@ class LeapListener extends Listener
 		
 		int indexID = 0;
 		double yPalmPosition = 0;
+		double xPalmPosition = 0;
+		double zPalmPosition = 0;
 	
 		//float instantaneousFrameRate = frame.currentFramesPerSecond();
 		//System.out.println(instantaneousFrameRate);
@@ -103,27 +112,31 @@ class LeapListener extends Listener
 								+ "Yaw: " + Math.toDegrees(direction.yaw()));*/
 			
 			Vector palmPosition = hand.palmPosition();
-			/*
+			
 			System.out.println("X: " +palmPosition.getX()
 								+ " Y: " + palmPosition.getY()
 								+ " Z: " + palmPosition.getZ());
-			*/
 			
 			yPalmPosition = palmPosition.getY();
 			
 			yPalmPositionDelta = yPalmPosition - yPalmPositionOld;
-			System.out.println("Delta: " + yPalmPositionDelta);
+			//System.out.println("Delta: " + yPalmPositionDelta);
 			yPalmPositionOld = yPalmPosition;
 			
+			xPalmPosition = palmPosition.getX();
+			zPalmPosition = palmPosition.getZ();
+			
+			if(xPalmPosition >= -50 && xPalmPosition <= 50 && zPalmPosition >= -50 && zPalmPosition <= 50)
+			{
 			if(yPalmPositionDeltaBuffer > -10 && yPalmPositionDeltaBuffer < 10)
 			{
 				yPalmPositionDeltaBuffer += yPalmPositionDelta;
-				System.out.println("DeltaBuffer " + yPalmPositionDeltaBuffer);
+				//System.out.println("DeltaBuffer " + yPalmPositionDeltaBuffer);
 			}
 			else if(yPalmPositionDeltaBuffer <= -10)
 			{
 				yPalmPositionDeltaInt = (int)yPalmPositionDeltaBuffer;
-				System.out.println("Down " + yPalmPositionDeltaInt);	
+				//System.out.println("Down " + yPalmPositionDeltaInt);	
 				vol += -1;
 				//vol += yPalmPositionDeltaInt;
 				yPalmPositionDeltaBuffer = 0;
@@ -131,12 +144,13 @@ class LeapListener extends Listener
 			else if(yPalmPositionDeltaBuffer >= 10)
 			{
 				yPalmPositionDeltaInt = (int)yPalmPositionDeltaBuffer;
-				System.out.println("Up " + yPalmPositionDeltaInt);
+				//System.out.println("Up " + yPalmPositionDeltaInt);
 				vol += 1;
 				//vol += yPalmPositionDeltaInt;
 				yPalmPositionDeltaBuffer = 0;
 			}
 			WindowPalm.getStatus(vol);
+			}
 		}
 		
 		
@@ -261,13 +275,41 @@ class LeapListener extends Listener
 					
 				// Swipe Gesture detection has to be enabled (onConnect) and recognized here	
 				
-				/*case TYPE_SWIPE:
+				case TYPE_SWIPE:
 					SwipeGesture swipe = new SwipeGesture(gesture);
-					System.out.println(" Swipe ID: " + swipe.id()
+					
+					
+					/*System.out.println(" Swipe ID: " + swipe.id()
 										+ " State: " + swipe.state()
 										+ " Position: " + swipe.position()
 										+ " Direction: " +swipe.direction()
-										+ " Speed: (mm/s) " + swipe.speed());
+										+ " Speed: (mm/s) " + swipe.speed());*/
+					
+					/*
+					if(swipe.state() != State.STATE_START)
+					{
+						// circle hasn't just started
+						swipeBuffer = new SwipeGesture(controller.frame(1).gesture(swipe.id()));
+						direction = (swipe.position().getX() - swipeBuffer.position().getX());
+						//System.out.println(direction);
+						if(direction == 0 && directionBuffer!= 0)
+						{
+							if(directionBuffer < 0)
+							{
+								System.out.println("Left");
+							}
+							if(directionBuffer > 0)
+							{
+								System.out.println("Right");
+							}
+						}
+						else
+						{
+							directionBuffer = direction;
+						}
+					}
+					*/
+					/*
 					if (swipe.direction().getX() < 0)
 					{
 						System.out.println("Left");
@@ -275,10 +317,9 @@ class LeapListener extends Listener
 					else if(swipe.direction().getX() > 0)
 					{
 						System.out.println("Right");
-					}
+					}*/
 					
-					
-					break;*/
+					break;
 				
 				
 				/*
@@ -358,14 +399,16 @@ public class LeapMotionPalmPosition {
 		int lmOutputInt = 0;
 		controller.addListener(listener);
 		
-		String hostname = "10.191.3.6";
-        int port = Integer.parseInt("2016");
+		String hostname = "172.19.68.177";
+        int port = Integer.parseInt("5000");
         
 		//System.out.println("Press Enter to quit");		
-		try (Socket socket = new Socket(hostname, port))
+		
+        try (Socket socket = new Socket(hostname, port))
 		{
 			OutputStream output = socket.getOutputStream();
             PrintWriter writer = new PrintWriter(output, true);
+            System.out.println("Connected with network");
             writer.println("Leap Motion Controller connected");
 			
             while(true)
@@ -403,7 +446,21 @@ public class LeapMotionPalmPosition {
 			System.out.println("Server exception: " + e.getMessage());
 			e.printStackTrace();
 		}
+		controller.removeListener(listener); 
+		
+        /*
+		try
+		{
+			System.in.read();
+		}
+		
+		catch(IOException e)
+		{
+			e.printStackTrace();
+		}
+		
 		controller.removeListener(listener);
+		*/
 	}
 }
 

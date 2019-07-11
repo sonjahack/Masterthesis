@@ -164,7 +164,7 @@ class Network_connect extends Thread
 	
 	public void run()
 	{
-		String hostname = "10.191.3.6";
+		String hostname = "192.168.137.92";
 	    int port = Integer.parseInt("2016");
 	    String r = "R";
 	    String u = "U";
@@ -213,6 +213,7 @@ class Network_connect extends Thread
 			{
 				//System.out.println("check");
 				writer.println("enable; set:target 1;");
+				System.out.println("+1");
 				//writer.println(sensor_output_cut);
 				sensor_output_cut = null;
 				si.resetSensorData();
@@ -220,6 +221,7 @@ class Network_connect extends Thread
 			else if(sensor_output_cut.contentEquals(l))
 			{
 				writer.println("enable; set:target -1;");
+				System.out.println("-1");
 				//writer.println(sensor_output_cut);
 				sensor_output_cut = null;
 				si.resetSensorData();
